@@ -7,6 +7,7 @@ import { HeaderComponentComponent } from './components/header-component/header-c
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InitialComponent } from './pages/initial/initial.component';
+import { BtnLoginComponent } from './components/btn-login/btn-login.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { InitialComponent } from './pages/initial/initial.component';
     HeaderComponentComponent,
     FooterComponentComponent,
     NavbarComponent,
-    InitialComponent
+    InitialComponent,
+    BtnLoginComponent
   ],
   imports: [
     BrowserModule,
