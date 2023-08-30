@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +9,8 @@ import { FooterComponentComponent } from './components/footer-component/footer-c
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InitialComponent } from './pages/initial/initial.component';
 import { BtnLoginComponent } from './components/btn-login/btn-login.component';
+import { BtnNormalComponent } from './components/btn-normal/btn-normal.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -16,10 +19,13 @@ import { BtnLoginComponent } from './components/btn-login/btn-login.component';
     FooterComponentComponent,
     NavbarComponent,
     InitialComponent,
-    BtnLoginComponent
+    BtnLoginComponent,
+    BtnNormalComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     AppRoutingModule
   ],
   providers: [],

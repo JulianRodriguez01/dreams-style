@@ -1,5 +1,61 @@
+a {
+  color: #8444FF !important;
+}
+
+input {
+  height: 20px; /* Ajusta el valor según el tamaño deseado */
+  width: 3rem;
+}
+
+.custom-margin {
+  margin-right: 10px; /* Ajusta el valor según la separación deseada */
+}
+
+.btn-square {
+  width: 50px; /* Ajusta el valor según el tamaño deseado */
+  height: 50px; /* Ajusta el valor según el tamaño deseado */
+}
+
 .bg-dark {
   background-color: #212121 !important;
+}
+
+p i {
+  margin-right: 10px;
+}
+
+.d-flex a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.d-flex a:hover {
+  text-decoration: underline;
+}
+
+.d-flex a i {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.btn-custom {
+  border-color: #8444FF; /* Cambia el color del borde del botón si es necesario */
+  color: #fff; /* Cambia el color del texto en el botón si es necesario */
+  align-items: center;
+}
+.btn-custom i {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+/* Cambiar el color del botón en hover */
+.btn-custom:hover {
+  background-color: #5d00ff; /* Cambia el color del botón en hover según el que desees */
+  border-color: #5d00ff; /* Cambia el color del borde en hover si es necesario */
+  color: #fff; /* Cambia el color del texto en hover si es necesario */
+  text-decoration: none;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -30,11 +86,11 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #7AB730 !important;
+  color: #8444FF !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #527a20 !important;
+  color: #8444FF !important;
 }
 
 .text-uppercase {
@@ -69,7 +125,6 @@ button,
 input {
   overflow: visible;
 }
-
 
 .custom-input-group {
   border-radius: 0; /* Elimina los bordes redondeados */

@@ -4,14 +4,21 @@ div, p, a {
   padding: 0.5rem;
 }
 
+.nav-item {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  color: #253D4E !important;
+  font-weight: 900;
+}
+
 .center-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  text-align: center; /* Aplica el centrado de texto si es necesario */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: #ffffff !important;
   border: 0;
-  /*
+/*
   position: fixed;
   z-index: 2;
   top: 3rem;
@@ -20,15 +27,16 @@ div, p, a {
 }
 
 .internal-container {
-  background-color: rgb(255, 255, 255) !important;
+  background-color: transparent !important;
 }
 
 .division {
-  padding-left: 25rem !important;
+  padding-left: 10rem !important;
 }
 
 h1 {
   font-family: "Rubik";
+  padding-left: 2rem;
   color: #7079f0 !important;
 }
 
@@ -46,7 +54,6 @@ div.position {
   width: 100%;
   height: 3.5rem;
   border-bottom: 2px solid white;
-  background-color: #ea1212 !important;
 }
 
 .position-name {
