@@ -166,8 +166,6 @@ div.position-buttons {
   padding: 10px;
   text-decoration: none;
   color: #fff;
-  background-color: #ba1515 !important;
-
 }
 
 @media (max-width: 768px) {
@@ -192,4 +190,20 @@ div.position-buttons {
   .show-sidebar {
     display: block;
   }
+}
+
+.nav-item.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; /* Iniciar la línea desde el borde izquierdo del enlace */
+  bottom: -3px; /* Colocar la línea justo debajo del enlace */
+  width: 100%; /* Establecer el ancho de la línea al 100% del enlace */
+  height: 4px; /* Establecer el grosor de la línea */
+  background-color: #7079f0; /* Color de la línea (puedes cambiarlo) */
+  transform: scaleX(0); /* Inicialmente, la línea estará completamente oculta */
+  transition: transform 0.3s ease; /* Agregar una transición para suavizar el efecto */
+}
+
+.nav-item.nav-link:hover::after {
+  transform: scaleX(1); /* Mostrar la línea al 100% de ancho */
 }
