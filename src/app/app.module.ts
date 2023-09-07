@@ -11,6 +11,7 @@ import { InitialComponent } from './pages/initial/initial.component';
 import { BtnLoginComponent } from './components/btn-login/btn-login.component';
 import { BtnNormalComponent } from './components/btn-normal/btn-normal.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     InitialComponent,
     BtnLoginComponent,
     BtnNormalComponent,
-    CarouselComponent
+    CarouselComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
