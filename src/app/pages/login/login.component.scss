@@ -1,5 +1,5 @@
 .bg-registration {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/././assets/img/carousel-1.jpg"), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("/././assets/img/carousel-1.jpg"), no-repeat center center;
   background-size: cover;
 }
 
@@ -11,8 +11,30 @@
 .form-group {
   margin-bottom: 15px; /* Ajusta este valor según tus necesidades */
 }
-/* Cambiar el color del botón a un tono personalizado */
-.custom-button {
-  background-color: #ff6600; /* Cambia este valor al color deseado */
-  color: white;
+
+
+a {
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Ajusta la cantidad de espacio entre ellos según tus necesidades */
+}
+.custom-width {
+  width: 200%; /* Ajusta el valor del ancho según tus necesidades */
+}
+
+.center-button {
+  display: block;
+  margin: 0 auto; /* Esto centrará horizontalmente el botón */
+}
+
+button {
+  width: 12rem !important;
 }

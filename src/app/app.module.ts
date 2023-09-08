@@ -12,6 +12,7 @@ import { BtnLoginComponent } from './components/btn-login/btn-login.component';
 import { BtnNormalComponent } from './components/btn-normal/btn-normal.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { LoginComponent } from './pages/login/login.component';
+import { BtnGoogleComponent } from './components/btn-google/btn-google.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LoginComponent } from './pages/login/login.component';
     BtnLoginComponent,
     BtnNormalComponent,
     CarouselComponent,
-    LoginComponent
+    LoginComponent,
+    BtnGoogleComponent
   ],
   imports: [
     BrowserModule,
