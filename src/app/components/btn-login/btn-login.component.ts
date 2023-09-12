@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-btn-login',
@@ -9,7 +10,11 @@ export class BtnLoginComponent {
 
   @Input() textButton: string;
 
-  constructor() {
+  constructor(private router: Router) {
     this.textButton = '';
+  }
+
+  redirigirLogin() {
+    this.router.navigate(['/login']);
   }
 }

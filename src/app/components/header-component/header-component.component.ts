@@ -1,4 +1,5 @@
 import { Component, Renderer2, ElementRef  } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header-component',
@@ -7,7 +8,11 @@ import { Component, Renderer2, ElementRef  } from '@angular/core';
 })
 export class HeaderComponentComponent {
 
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
+  constructor(private renderer: Renderer2, private el: ElementRef, private router: Router) { }
+
+  redirigirIndex() {
+    this.router.navigate(['/index']);
+  }
 
   ngOnInit(): void {
     const button = this.el.nativeElement.children[0]; // Accede al primer hijo de <body>
