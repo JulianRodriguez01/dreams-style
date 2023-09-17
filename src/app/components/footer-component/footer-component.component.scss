@@ -2,6 +2,12 @@ a {
   color: #8444FF !important;
 }
 
+.custom-margin i {
+  display: block; /* Asegura que cada ícono se muestre en una línea separada */
+  margin: 0 auto; /* Centra horizontalmente el contenido dentro del botón */
+}
+
+
 input {
   height: 20px; /* Ajusta el valor según el tamaño deseado */
   width: 3rem;

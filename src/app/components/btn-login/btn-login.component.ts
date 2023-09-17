@@ -13,8 +13,4 @@ export class BtnLoginComponent {
   constructor(private router: Router) {
     this.textButton = '';
   }
-
-  redirigirLogin() {
-    this.router.navigate(['/login']);
-  }
 }
