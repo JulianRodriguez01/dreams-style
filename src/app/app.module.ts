@@ -15,6 +15,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { BtnGoogleComponent } from './components/btn-google/btn-google.component';
 //import { InitialUserComponent } from './pages/initial-user/initial-user.component';
 import { AdminModule } from './admin/admin.module';
+import { RegisterUserComponent } from './pages/register-user/register-user.component';
 import { UserModule } from './user/user.module';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { UserModule } from './user/user.module';
     CarouselComponent,
     LoginComponent,
     BtnGoogleComponent,
+    RegisterUserComponent,
   ],
   imports: [
     BrowserModule,
