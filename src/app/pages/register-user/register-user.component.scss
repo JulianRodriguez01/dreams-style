@@ -1,0 +1,44 @@
+
+.bg-registration {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("/././assets/img/carousel-3.webp"), no-repeat center center;
+  background-size: cover;
+}
+
+.form-control {
+    height: 20px; /* Ajusta este valor según tus necesidades */
+  }
+  
+  /* Agrega espacio entre los input */
+.form-group {
+    margin-bottom: 15px; /* Ajusta este valor según tus necesidades */
+}
+
+.custom-card-header {
+  background-color: hsl(261,100%,63%);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+a {
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Ajusta la cantidad de espacio entre ellos según tus necesidades */
+  }
+  .custom-width {
+    width: 300%; /* Ajusta el valor del ancho según tus necesidades */
+  }
+  
+  .center-button {
+    display: block;
+    margin: 0 auto; /* Esto centrará horizontalmente el botón */
+  }
+  
