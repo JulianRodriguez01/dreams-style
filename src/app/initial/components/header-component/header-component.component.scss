@@ -1,0 +1,209 @@
+div, p, a {
+  margin: 0;
+  background-color: #fff !important;
+  padding: 0.5rem;
+}
+
+.nav-item {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  color: #253D4E !important;
+  font-weight: 900;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff !important;
+  border: 0;
+/*
+  position: fixed;
+  z-index: 2;
+  top: 3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+}
+
+.internal-container {
+  background-color: transparent !important;
+}
+
+.division {
+  padding-left: 10rem !important;
+}
+
+h1 {
+  font-family: "Rubik";
+  padding-left: 2rem;
+  color: #7079f0 !important;
+}
+
+.text-dark{
+  color: #5d00ff !important;
+}
+
+div.position {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1px 0px;
+  width: 100%;
+  height: 3.5rem;
+  border-bottom: 2px solid white;
+}
+
+.position-name {
+  padding: 0.5rem;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.name {
+  position: relative;
+  font-family: 'Migra Ligth';
+  font-style: normal;
+  font-size: 16px;
+  display: flex;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  min-width: 0;
+  background-color: #fff;
+}
+
+div.position-buttons {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-right: 2rem;
+  gap: 3rem;
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 0;
+  top: 18px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  z-index: 2;
+}
+
+.links {
+  font-family: 'Gill Sans MT';
+  font-style: normal;
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.links::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #ffffff;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.links:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.links-sidebar {
+  font-family: 'Gill Sans MT';
+  font-style: normal;
+  position: relative;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  background-color: #fff;
+}
+
+.position-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-button {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  transition: left 0.3s;
+  z-index: 4;
+  background-color: #fff;
+}
+
+.show-sidebar {
+  left: 0;
+  background-color: #fff;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+
+    cursor: pointer;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .show-sidebar {
+    display: block;
+  }
+}
+
+.nav-item.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; /* Iniciar la línea desde el borde izquierdo del enlace */
+  bottom: -3px; /* Colocar la línea justo debajo del enlace */
+  width: 100%; /* Establecer el ancho de la línea al 100% del enlace */
+  height: 4px; /* Establecer el grosor de la línea */
+  background-color: #7079f0; /* Color de la línea (puedes cambiarlo) */
+  transform: scaleX(0); /* Inicialmente, la línea estará completamente oculta */
+  transition: transform 0.3s ease; /* Agregar una transición para suavizar el efecto */
+}
+
+.nav-item.nav-link:hover::after {
+  transform: scaleX(1); /* Mostrar la línea al 100% de ancho */
+}

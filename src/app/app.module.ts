@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,9 +13,10 @@ import { BtnNormalComponent } from './components/btn-normal/btn-normal.component
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { LoginComponent } from './pages/login/login.component';
 import { BtnGoogleComponent } from './components/btn-google/btn-google.component';
-//import { InitialUserComponent } from './pages/initial-user/initial-user.component';
+
 import { AdminModule } from './admin/admin.module';
 import { UserModule } from './user/user.module';
+//import { InitialUserComponent } from './pages/initial-user/initial-user.component';
 
 @NgModule({
   declarations: [

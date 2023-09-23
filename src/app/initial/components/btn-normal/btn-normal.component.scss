@@ -1,0 +1,82 @@
+.small {
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0.8em 1.8em;
+}
+
+.medium {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0.9em 2em;
+}
+
+.large {
+  font-weight: 900;
+  font-size: 25px;
+  padding: 0.9em 2.0em;
+}
+
+.c-button {
+  color: #000;
+
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 4;
+  background-color: #7079f0;
+}
+
+.c-button--gooey {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 4px solid #7079f0;
+  border-radius: 0;
+  position: relative;
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+  background-color: #714da6;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+  color: #fff;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
