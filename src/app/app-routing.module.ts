@@ -8,6 +8,7 @@ import { RecoveryAccountComponent } from './initial/pages/recovery-account/recov
 import { RegisterUserComponent } from './initial/pages/register-user/register-user.component';
 
 import { LayoutUserComponent } from './users/components/layout-user/layout-user.component';
+import { ProfileUserComponent } from './users/pages/profile-user/profile-user.component';
 
 const routes: Routes = [
   {
@@ -25,8 +26,8 @@ const routes: Routes = [
     path: 'user',
     component: LayoutUserComponent,
     children: [
-      { path: '', redirectTo: 'index', pathMatch: 'full' },
-      { path: 'index', component: IndexComponent },
+      { path: '', redirectTo: 'profile-user', pathMatch: 'full' },
+      { path: 'profile-user', component: ProfileUserComponent },
       { path: 'login', component: LoginComponent },
       { path: 'recovery', component: RecoveryAccountComponent },
       { path: 'register', component: RegisterUserComponent },
