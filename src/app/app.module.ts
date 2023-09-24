@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { InitialModule } from './initial/initial.module';
+import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { AdminModule } from './admin/admin.module';
     AppRoutingModule,
     AdminModule,
     InitialModule,
+    UsersModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
