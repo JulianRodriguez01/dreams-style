@@ -4,10 +4,10 @@
   background-size: cover;
 }
 
-.form-control {
-    height: 20px; /* Ajusta este valor según tus necesidades */
-  }
-  
+.form-control option {
+  color: #000; /* Color del texto deseado (por ejemplo, negro) */
+}
+
   /* Agrega espacio entre los input */
 .form-group {
     margin-bottom: 15px; /* Ajusta este valor según tus necesidades */
@@ -25,7 +25,7 @@ a {
     text-align: center;
     text-decoration: none;
   }
-  
+
   .button-container {
     display: flex;
     flex-direction: column;
@@ -36,9 +36,8 @@ a {
   .custom-width {
     width: 300%; /* Ajusta el valor del ancho según tus necesidades */
   }
-  
+
   .center-button {
     display: block;
     margin: 0 auto; /* Esto centrará horizontalmente el botón */
   }
-  
