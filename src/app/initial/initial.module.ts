@@ -35,6 +35,10 @@ import { RecoveryAccountComponent } from './pages/recovery-account/recovery-acco
     CommonModule,
     BrowserModule,
     RouterModule,
+  ],
+  exports: [
+    BtnNormalComponent,
+    FooterComponentComponent,
   ]
 })
 export class InitialModule { }

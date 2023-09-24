@@ -3,22 +3,22 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
+import { InitialModule } from '../initial/initial.module';
 import { HeaderUserComponent } from './components/header-user/header-user.component';
-import { FooterUserComponent } from './components/footer-user/footer-user.component';
 import { LayoutUserComponent } from './components/layout-user/layout-user.component';
 import { ProfileUserComponent } from './pages/profile-user/profile-user.component';
 
 @NgModule({
   declarations: [
     HeaderUserComponent,
-    FooterUserComponent,
     LayoutUserComponent,
-    ProfileUserComponent
+    ProfileUserComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     RouterModule,
+    InitialModule,
   ]
 })
 export class UsersModule { }
