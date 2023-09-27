@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
+import { ApiPersonService } from 'C:/Users/USER/Documents/Uptc/10mo Semestre/dreams-style/src/app/services/api-person.service';
 
 import { HeaderComponentComponent } from './components/header-component/header-component.component';
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
@@ -35,10 +38,14 @@ import { RecoveryAccountComponent } from './pages/recovery-account/recovery-acco
     CommonModule,
     BrowserModule,
     RouterModule,
+    HttpClientModule,
   ],
   exports: [
     BtnNormalComponent,
     FooterComponentComponent,
+  ],
+  providers: [
+    ApiPersonService,
   ]
 })
 export class InitialModule { }
