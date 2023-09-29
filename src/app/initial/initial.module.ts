@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-import { ApiPersonService } from 'C:/Users/USER/Documents/Uptc/10mo Semestre/dreams-style/src/app/services/api-person.service';
+//import { ApiPersonService } from 'C:/Users/USER/Documents/Uptc/10mo Semestre/dreams-style/src/app/services/api-person.service';
 
 import { HeaderComponentComponent } from './components/header-component/header-component.component';
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
@@ -45,7 +45,7 @@ import { RecoveryAccountComponent } from './pages/recovery-account/recovery-acco
     FooterComponentComponent,
   ],
   providers: [
-    ApiPersonService,
+    //ApiPersonService,
   ]
 })
 export class InitialModule { }

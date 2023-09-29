@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiPersonService } from 'C:/Users/USER/Documents/Uptc/10mo Semestre/dreams-style/src/app/services/api-person.service';
+//i<mport { ApiPersonService } from 'C:/Users/USER/Documents/Uptc/10mo Semestre/dreams-style/src/app/services/api-person.service';
 
 @Component({
   selector: 'app-register-user',
   templateUrl: './register-user.component.html',
   styleUrls: ['./register-user.component.scss']
 })
-export class RegisterUserComponent implements OnInit {
+export class RegisterUserComponent {
 
   data: any[] = [];
-
+/*
   constructor(private apiPersonService: ApiPersonService) { }
 
   ngOnInit(): void {
@@ -21,4 +21,5 @@ export class RegisterUserComponent implements OnInit {
       this.data = data;
     })
   }
+  */
 }
