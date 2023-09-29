@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+html, body, .container-fluid, .row, .col-md-6, .half, .circle {
+    height: 600PX;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-0{
+    color: #86c8e2!important;
+}
+
+.text-dark{
+    color: #ffffff !important;
+    font-size: 30px;
+  }
+
+.text-gender{
+    color: #b1a1df !important;
+    font-size: 40px;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  
+  .container {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.half {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),url("/././assets/img/silhouetteMan.jpg"), no-repeat center center;
+  background-size: cover;
+}
+
+.pink {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("/././assets/img/silhouetteWoman.jpg"), no-repeat center center;
+  background-size: cover;
+}
+.button-woman {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #333333;
+    background-color: #b1a1df;
+    transition: background-color 0.3s;
+    text-align: center;
+    line-height: 200px; /* Ajusta el valor según tus necesidades */
+}
+
+.button-man {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #333333;
+    background-color: #86c8e2;
+    transition: background-color 0.3s;
+    text-align: center;
+    line-height: 200px; /* Ajusta el valor según tus necesidades */
+}
+
+
+.button-woman:hover {
+    background-color: #a883ec;
+}
+
+.button-man:hover {
+    background-color: #62a6ab;
+}
+
+.button-woman:hover,
+.button-man:hover {
+    transform: scale(0.9);
+}

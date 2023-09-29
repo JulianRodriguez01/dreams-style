@@ -9,6 +9,7 @@ import { RegisterUserComponent } from './initial/pages/register-user/register-us
 
 import { LayoutUserComponent } from './users/components/layout-user/layout-user.component';
 import { ProfileUserComponent } from './users/pages/profile-user/profile-user.component';
+import { PantGenderComponent } from './users/pages/pant-gender/pant-gender.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'recovery', component: RecoveryAccountComponent },
       { path: 'register', component: RegisterUserComponent },
+      { path: 'pant-gender', component: PantGenderComponent },
     ],
   },
   {
@@ -31,6 +33,7 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'recovery', component: RecoveryAccountComponent },
       { path: 'register', component: RegisterUserComponent },
+      { path: 'pant-gender', component: PantGenderComponent },
     ],
   }
 ];
