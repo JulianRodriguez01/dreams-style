@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class ApiPersonService {
 
-  private pathApi = 'https://apipersonsdreamsstyle.azurewebsites.net';
-  //private pathApi = 'https://rickandmortyapi.com/api/character/1,183';
+  private pathApi = 'https://apipersondreamstyle.azurewebsites.net/api/User/';
+  //private pathApi = 'https://localhost:7008/api';
 
   constructor(private http: HttpClient) {  }
 

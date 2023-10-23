@@ -18,6 +18,7 @@ import { LayoutInitialComponent } from './components/layout-initial/layout-initi
 import { HeaderInitialComponent } from './components/header-initial/header-initial.component';
 import { RegisterUserComponent } from './pages/register-user/register-user.component';
 import { RecoveryAccountComponent } from './pages/recovery-account/recovery-account.component';
+import { CatalogComponent } from './pages/catalog/catalog.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { RecoveryAccountComponent } from './pages/recovery-account/recovery-acco
     HeaderInitialComponent,
     RegisterUserComponent,
     RecoveryAccountComponent,
+    CatalogComponent,
   ],
   imports: [
     CommonModule,
@@ -45,7 +47,7 @@ import { RecoveryAccountComponent } from './pages/recovery-account/recovery-acco
     FooterComponentComponent,
   ],
   providers: [
-    //ApiPersonService,
+    ApiPersonService,
   ]
 })
 export class InitialModule { }
