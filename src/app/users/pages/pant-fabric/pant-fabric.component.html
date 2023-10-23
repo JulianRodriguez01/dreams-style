@@ -1,0 +1,38 @@
+<div class="row g-0">
+    <div class="col-md-6">
+      <div class="container">
+        <div class="container-row">
+          <div class="icon"></div>
+          <div class="tittle">Elige tu Tela Favorita</div>
+        </div>
+        <div class="separator"></div>
+        <section>
+          <details *ngFor="let fabric of fabricsList" (click)="toggleAccordion($event)">
+            <summary>
+              {{ fabric.nameFabric }}
+            </summary>
+            <div>
+              <ul class="color-list">
+                <li *ngFor="let color of fabric.colors" (click)="handleColorClick($event, color, fabric)">
+                  <span [class.selected]="color.isSelected">{{ color.name }}</span>
+                  <div class="color-square" [style.background-color]="color.hex"></div>
+                </li>
+              </ul>
+            </div>
+          </details>
+        </section>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <div class="imgBanner">
+          <img [src]="'../../../../assets/img/' + selectedImage" alt="fabric">
+        </div>
+        <div class="button-container">
+            <div class="text-center">
+                <button id="saveMeasureement" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit"(click)="saveFabricSelection()">Guardar Tela</button>
+                <button [routerLink]="['/user/pant-pocket']" id ="goFrabrics" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Siguiente</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  

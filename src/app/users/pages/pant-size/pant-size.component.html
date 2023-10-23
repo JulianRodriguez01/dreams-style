@@ -1,0 +1,77 @@
+<div class="row g-0">
+    <div class="col-md-5">
+       <div class="container">
+            <div class="container-row">
+              <div class="icon"></div>
+               <div class="tittle">Selecciona tu talla</div>
+            </div>
+            <div class="separator"></div>
+            <ul style="display: flex;list-style: none;justify-content: center;" >     
+                <div>
+                      <div>
+                        <ul>
+                          <li *ngFor="let size of sizesListAuxAux" [class.selected]="size.isSelected" (click)="toggleSizeSelection(size)"> 
+                             {{ size.nameSize }}
+                          </li>
+                        </ul>
+                      </div>
+                </div> 
+            </ul>
+            <div class="separator"></div>
+            <div class="container-row">
+                <div class="icon2"></div>
+                <div class="tittle">Medidas</div>                       
+            </div>
+            <div class="separator"></div>
+
+            <div *ngIf="selectedSize">
+                <div>
+                    <label for="contourSize">Tamaño del contorno</label>
+                    <input class="sliderControl" type="range" id="contourSize" min="0" max="100" value="{{selectedSize.contourSize}}">
+                    <span id="contourSizeValue">{{selectedSize.contourSize}}</span>
+                </div>
+                <div>
+                    <label for="crotchLength">Longitud entrepierna</label>
+                    <input class="sliderControl" type="range" id="crotchLength" min="0" max="150" value="{{selectedSize.crotchLength}}">
+                    <span id="crotchLengthValue">{{selectedSize.crotchLength}}</span>
+                </div>
+                <div>
+                    <label for="wipeHip">Cadera Ancha</label>
+                    <input class="sliderControl" type="range" id="wipeHip" min="0" max="130" value="{{selectedSize.wipeHip}}">
+                    <span id="wipeHipValue">{{selectedSize.wipeHip}}</span>
+                </div>
+                <div>
+                    <label for="WideBoot">Bota Ancha</label>
+                    <input class="sliderControl" type="range" id="WideBoot" min="0" max="50" value="{{selectedSize.wideBoot}}">
+                    <span id="WideBoot">{{selectedSize.wideBoot}}</span>
+                </div>
+                <div>
+                    <label for="wideThigh">Muslo Ancho</label>
+                    <input class="sliderControl" type="range" id="wideThigh" min="0" max="70" value="{{selectedSize.wideThigh}}">
+                    <span id="wideThigh">{{selectedSize.wideThigh}}</span>
+                </div>
+                <div>
+                    <label for="long">Largo</label>
+                    <input class="sliderControl" type="range" id="long" min="0" max="150" value="{{selectedSize.long}}">
+                    <span id="long">{{selectedSize.long}}</span>
+                </div>
+            </div> 
+        </div>   
+      
+    </div> 
+    <div class="col-md-7">
+        <div class="imgBanner" *ngIf="searchType()==='H'">
+            <img src="../../../../assets/img/bannerMeasurementMen.png" alt="Hombre">
+        </div>
+        <div class="imgBanner" *ngIf="searchType()==='M'">
+            <img src="../../../../assets/img/bannerMeasurementWoman.png" alt="Mujer">
+        </div>
+        <div class="button-container">
+            <div class="text-center">
+              <button id="saveMeasureement" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit" (click)="saveMeasureementPant()">Guardar Medidas</button>
+              <button [routerLink]="['/user/pant-fabric']" id ="goFrabrics" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit"  [disabled]="!continue">Siguiente</button>
+            </div>
+        </div>
+    </div> 
+    
+</div>

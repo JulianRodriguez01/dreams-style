@@ -1,0 +1,24 @@
+<div class="row g-0">
+    <div class="col-md-5">
+        <div class="container">
+            <div class="container-row">
+                <div class="icon"></div>
+                <div class="tittle">Elije un estampado</div>
+            </div>
+            <div class="separator"></div>
+
+
+            <input type="file" (change)="onFileSelected($event)" accept="image/*">
+            <div class="tus-fotos" *ngIf="imageUrl">
+              <img [src]="imageUrl" alt="Imagen del pantalón">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7">
+
+        <div class="text-center">
+            <button id="saveMeasureement" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Guardar Bolsillos</button>
+            <button [routerLink]="['/user/pant-pocket']" id ="goFrabrics" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Siguiente</button>
+          </div>
+    </div>
+</div>

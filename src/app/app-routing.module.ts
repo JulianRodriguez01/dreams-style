@@ -10,6 +10,10 @@ import { RegisterUserComponent } from './initial/pages/register-user/register-us
 import { LayoutUserComponent } from './users/components/layout-user/layout-user.component';
 import { ProfileUserComponent } from './users/pages/profile-user/profile-user.component';
 import { PantGenderComponent } from './users/pages/pant-gender/pant-gender.component';
+import { PantSizeComponent } from './users/pages/pant-size/pant-size.component';
+import { PantFabricComponent } from './users/pages/pant-fabric/pant-fabric.component';
+import { PantPocketComponent } from './users/pages/pant-pocket/pant-pocket.component';
+import { PantStikerComponent } from './users/pages/pant-stiker/pant-stiker.component';
 
 const routes: Routes = [
   {
@@ -21,7 +25,6 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'recovery', component: RecoveryAccountComponent },
       { path: 'register', component: RegisterUserComponent },
-      { path: 'pant-gender', component: PantGenderComponent },
     ],
   },
   {
@@ -34,6 +37,10 @@ const routes: Routes = [
       { path: 'recovery', component: RecoveryAccountComponent },
       { path: 'register', component: RegisterUserComponent },
       { path: 'pant-gender', component: PantGenderComponent },
+      { path: 'pant-size', component: PantSizeComponent },
+      { path: 'pant-fabric', component: PantFabricComponent },
+      { path: 'pant-pocket', component: PantPocketComponent },
+      { path: 'pant-stiker', component: PantStikerComponent },
     ],
   }
 ];

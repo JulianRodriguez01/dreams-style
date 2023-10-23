@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/Quicksand.ttf') format('truetype');
+    
+}
+  
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+  
+body, html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c92f2f;
+}
+  
+.tittle{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 70px;
+    color: #253D4E;
+}
+
+.subtittle{
+    background: var(--13,  #f8f8f8);
+    color: var(--1, #6f7172);
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 2px solid var(--6, #b2c4ec);
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    src: url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+}
+
+.container{
+    margin-bottom: 10px;
+}
+    
+.container-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;   
+}
+
+.container-row2 {
+    display: flex;
+    align-items: center;
+    background-color:#dce6fc;
+    height: 145px;
+}
+  
+  
+.icon {
+    width: 3rem;
+    height: 3rem;
+    background: url("../../../../assets/icons/iconPocket.png"), no-repeat center center;
+    background-size: cover;
+    margin-right: 1rem;
+}
+  
+.icon2 {
+    width: 3rem;
+    height: 3rem;
+    background: url("../../../../assets/img/iconPocketD1.jpg"), no-repeat center center;
+    background-size: cover;
+    margin-right: 1rem;
+}
+
+.imgPocket{
+    width: 7rem;
+    height: 8rem;
+    border: 2px solid var(--6, #0a0a0a);
+    margin: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.imgBanner {
+    background-size: cover;
+    width: 80%;
+    height: 80%;
+    margin-left: 130px;
+    margin-top: 60px;
+}
+
+.imgBannerT{
+
+    background-size: cover;
+    width: 80%;
+    height: 80%;
+    margin-left: 130px;
+    margin-top: 60px;
+}
+
+.imgBannerD{
+
+    background-size: cover;
+    width: 80%;
+    height: 80%;
+    margin-left: 230px;
+    margin-top: 60px;
+}
+  
+.separator {
+    border-top: 2px solid #ccc; 
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.button-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    margin-top: 60px;
+}
+
+.custom-width {
+    width: 200%; 
+}
+  
+.center-button {
+    display: block;
+    margin: 0 auto; 
+}
+  
+button {
+    width: 12rem !important;
+    margin: 10px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    color: var(--1, #253D4E);
+    font-family: 'Lato', sans-serif;
+    src: url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.selected {
+    border: 2px solid rgb(42, 110, 236); 
+}
+
+.images-container {
+    display: flex;
+}
+
+.T img, .D img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
+    margin-bottom: 10px;
+}
+
+.D{
+    margin-left: 150px;
+}
+

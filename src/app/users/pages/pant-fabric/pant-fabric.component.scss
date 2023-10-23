@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/Quicksand.ttf') format('truetype');
+    
+}
+  
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+  
+body, html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.tittle{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 70px;
+    color: #253D4E;
+}
+
+.row{
+    margin-bottom: 15px;
+}
+  
+  
+.container-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+  
+.icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: url("../../../../assets/icons/iconFabric.png"), no-repeat center center;
+    background-size: cover;
+    margin-right: 1rem;
+}
+  
+.separator {
+    border-top: 2px solid #ccc; 
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.imgBanner, img {
+    background: cover;
+    width: 500px;
+    height: 400px;
+    margin-left: 40px;
+    margin-top: 50px;
+    border-radius: 60px;
+}
+  
+.button-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    margin-top: 60px;
+}
+
+.custom-width {
+    width: 200%; 
+}
+  
+.center-button {
+    display: block;
+    margin: 0 auto; 
+}
+  
+button {
+    width: 12rem !important;
+    margin: 10px;
+}
+ 
+section{
+    width: 100%;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+ 
+summary{
+    background: var(--13,  #f8f8f8);
+    color: var(--1, #6f7172);
+    padding: 15px;
+    cursor: pointer;
+    border: 2px solid var(--6, #b2c4ec);
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    src: url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+}
+
+li, ul{
+    padding: 10px;
+    background: #dce6fc;
+    color: rgb(61, 61, 61);
+    list-style-type: none;
+}
+
+.color-squares {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.color-square {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border: 2px solid var(--6, #0a0a0a);
+    cursor: pointer;
+}
+  
+.color-name {
+    text-align: center;
+}
+
+.color-list {
+    list-style-type: none;
+    display: flex;
+}
+  
+.color-list li {
+    display: flex;
+    align-items: center;
+}

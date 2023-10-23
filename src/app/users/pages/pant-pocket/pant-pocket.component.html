@@ -1,0 +1,71 @@
+<div class="row g-0">
+    <div class="col-md-5">
+        <div class="container">
+            <div class="container-row">
+                <div class="icon"></div>
+                <div class="tittle">Selecciona tus bolsillos</div>
+            </div>
+            <div class="separator"></div>
+            <div id="packet-post">
+                <div class="subtittle">Bosillos Posteriores</div>
+                <div class="container-row2">
+                    <div>
+                        <ul>
+                            <li *ngFor="let pocket of pocketsList">
+                                <ng-container *ngIf="pocket.typePocket === 'T'">
+                                    <img 
+                                        class="imgPocket" 
+                                        [src]="'../../../../assets/img/' + pocket.imagePocket" 
+                                        alt="pocket" 
+                                        (click)="selectPocket(pocket)"
+                                        [ngClass]="{'selected': pocket.isSelected}"
+                                    >
+                                </ng-container>
+                            </li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+            <div id="packet-pre">
+                <div class="subtittle">Bosillos Delanteros</div>
+                <div class="container-row2">
+                    <div>
+                        <ul>
+                            <li *ngFor="let pocket of pocketsList">
+                                <ng-container *ngIf="pocket.typePocket === 'D'">
+                                    <img  
+                                        class="imgPocket" 
+                                        [src]="'../../../../assets/img/' + pocket.imagePocket" 
+                                        alt="pocket" 
+                                        (click)="selectPocket(pocket)"
+                                        [ngClass]="{'selected': pocket.isSelected}"
+                                    >
+                                </ng-container>
+                            </li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="col-md-7">
+        <div class="button-container">
+            <div class="images-container">
+                <div class="D">
+                    <div>
+                      <img [src]="getSelectedPocketImageD()" [alt]="getPantType() === 'H' ? 'Hombre' : 'Mujer'">
+                    </div>
+                  </div>
+                <div class="T">
+                  <div>
+                    <img [src]="getSelectedPocketImageT()" [alt]="getPantType() === 'H' ? 'Hombre' : 'Mujer'">
+                  </div>
+                </div>
+              </div>  
+            <div class="text-center">
+              <button id="saveMeasureement" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Guardar Bolsillos</button>
+              <button [routerLink]="['/user/pant-stiker']" id ="goFrabrics" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Siguiente</button>
+            </div>
+        </div>
+    </div>
+</div>

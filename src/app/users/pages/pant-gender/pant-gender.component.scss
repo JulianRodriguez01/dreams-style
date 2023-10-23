@@ -6,7 +6,7 @@ body, html {
     background-color: #f0f0f0;
 }
 
-html, body, .container-fluid, .row, .col-md-6, .half, .circle {
+html, body, .col-md-6, .half, .circle {
     height: 600PX;
     margin: 0;
     display: flex;
@@ -14,8 +14,15 @@ html, body, .container-fluid, .row, .col-md-6, .half, .circle {
     align-items: center;
 }
 
+.container {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center; /* Alinea los elementos en la parte superior vertical */
+}
+
 .m-0{
-    color: #86c8e2!important;
+    color: #007151!important;
 }
 
 .text-dark{
@@ -24,19 +31,13 @@ html, body, .container-fluid, .row, .col-md-6, .half, .circle {
   }
 
 .text-gender{
-    color: #b1a1df !important;
+    color: #39105b !important;
     font-size: 40px;
     font-weight: bolder;
     text-transform: uppercase;
   }
   
-  .container {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
 .half {
     flex: 1;
     display: flex;
@@ -45,12 +46,12 @@ html, body, .container-fluid, .row, .col-md-6, .half, .circle {
 }
 
 .blue {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),url("/././assets/img/silhouetteMan.jpg"), no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url("/././assets/img/silhouetteMan.jpg"), no-repeat center center;
   background-size: cover;
 }
 
 .pink {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("/././assets/img/silhouetteWoman.jpg"), no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/././assets/img/silhouetteWoman.jpg"), no-repeat center center;
   background-size: cover;
 }
 .button-woman {

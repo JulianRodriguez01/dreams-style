@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/assets/fonts/Quicksand.ttf') format('truetype');
+  
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body, html {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c92f2f;
+}
+
+.tittle{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 70px;
+  color: #253D4E;
+}
+
+
+.container-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  background: url("../../../../assets/icons/iconMeasurement.png"), no-repeat center center;
+  background-size: cover;
+  margin-right: 1rem;
+}
+
+.icon2 {
+  width: 3rem;
+  height: 3rem;
+  background: url("../../../../assets/icons/iconEditMeasurement.png"), no-repeat center center;
+  background-size: cover;
+  margin-right: 1rem;
+}
+
+.separator {
+  border-top: 2px solid #ccc; 
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 15px;
+  color: rgb(5, 5, 8);
+  border-radius: 60px;
+  background: var(--12, #e8edfc);
+}
+
+li.selected {
+  background-color:  #4890fe; 
+  font-weight: bold; 
+}
+
+label , span {
+  color: var(--1, #253D4E);
+  font-family: 'Lato', sans-serif;
+  src: url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 15px;
+}
+
+input[type="range"] {
+  width: 40%;
+  height: 2px;
+  background-color: #a02929;
+  border: none;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.imgBanner {
+  background-size: cover;
+  width: 80%;
+  height: 80%;
+  margin-left: 130px;
+  margin-top: 60px;
+}
+
+.button-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; 
+}
+.custom-width {
+  width: 200%; 
+}
+
+.center-button {
+  display: block;
+  margin: 0 auto; 
+}
+
+button {
+  width: 12rem !important;
+  margin: 10px;
+}

@@ -8,26 +8,11 @@ import { HeaderUserComponent } from './components/header-user/header-user.compon
 import { LayoutUserComponent } from './components/layout-user/layout-user.component';
 import { ProfileUserComponent } from './pages/profile-user/profile-user.component';
 import { PantGenderComponent } from './pages/pant-gender/pant-gender.component';
+import { PantSizeComponent } from './pages/pant-size/pant-size.component';
+import { PantFabricComponent } from './pages/pant-fabric/pant-fabric.component';
+import { PantPocketComponent } from './pages/pant-pocket/pant-pocket.component';
+import { PantStikerComponent } from './pages/pant-stiker/pant-stiker.component';
 
-
-const routes: Routes = [
-  {
-    path: '',
-    component: LayoutUserComponent ,
-    children: [
-      { path: '', redirectTo: 'index', pathMatch: 'full' },
-      { path: 'pant-gender', component: PantGenderComponent },
-    ],
-  },
-  {
-    path: 'user',
-    component: LayoutUserComponent,
-    children: [
-      { path: '', redirectTo: 'profile-user', pathMatch: 'full' },
-      { path: 'pant-gender', component: PantGenderComponent },
-    ],
-  }
-];
 
 @NgModule({
   declarations: [
@@ -35,6 +20,10 @@ const routes: Routes = [
     LayoutUserComponent,
     ProfileUserComponent,
     PantGenderComponent,
+    PantSizeComponent,
+    PantFabricComponent,
+    PantPocketComponent,
+    PantStikerComponent,
   ],
   imports: [
     CommonModule,
