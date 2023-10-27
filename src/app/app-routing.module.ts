@@ -6,6 +6,7 @@ import { IndexComponent } from './initial/pages/index/index.component';
 import { LoginComponent } from './initial/pages/login/login.component';
 import { RecoveryAccountComponent } from './initial/pages/recovery-account/recovery-account.component';
 import { RegisterUserComponent } from './initial/pages/register-user/register-user.component';
+import { CatalogComponent } from './initial/pages/catalog/catalog.component';
 
 import { LayoutUserComponent } from './users/components/layout-user/layout-user.component';
 import { ProfileUserComponent } from './users/pages/profile-user/profile-user.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'recovery', component: RecoveryAccountComponent },
       { path: 'register', component: RegisterUserComponent },
+      { path: 'catalog', component: CatalogComponent },
     ],
   },
   {
