@@ -41,7 +41,7 @@ export class PantPocketService {
       imagePocket: 'iconPocketD4.jpg',
       isSelected: true,
       imageMen: [{ imageName: 'bannerMan.jpg', type: 'H'}],
-      imageWomen: [{ imageName: 'bannerWoman.jpg', type: 'M'}]
+      imageWomen: [{ imageName: 'bannerWomen.jpg', type: 'M'}]
     },{
       id: 5,
       namePocket: "Parche con abertura diagonal",
@@ -87,6 +87,4 @@ export class PantPocketService {
   public getListGender():Pockets[]{
     return this.pocketsListAux;
    }
-
-
 }

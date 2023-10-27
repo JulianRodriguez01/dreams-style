@@ -1,0 +1,144 @@
+.bg-customPant {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("/././assets/img/carousel-5.png"), no-repeat center center;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/Quicksand.ttf') format('truetype'); 
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+  
+body, html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c92f2f;
+}
+  
+.tittle{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 70px;
+    color: #253D4E;
+}
+
+.final-pant-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: 700px;
+    height: 450px; /* Ajusta la altura según tus necesidades */
+    background-color: white;
+    margin:100px;
+    border-radius: 15px; 
+    justify-content: space-between;
+}
+
+.talla-name, .fabric-name {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.image-pant-final{
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+}
+
+.properties-pant-final{
+    width: 50%;
+    height: 100%;
+    margin: 10px;
+}
+
+.image-pant-final img {
+    display: inline-block; /* Asegura que las imágenes se muestren en línea */
+    margin-right: 10px; /* Espacio entre las imágenes (puedes ajustar según necesites) */
+    width: 200px;
+    height: 400px;
+    margin-top: 25px;
+}
+
+.circle-size {
+    width: 30px;
+    height: 30px;
+    background-color: #7079f0; /* Color del círculo */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ccc; /* Borde del cuadro de color */
+    margin-bottom: 10px;
+}
+
+.color-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.separatorVertical {
+    border-left: 1px solid #888686; /* Cambia el grosor y el color según tus preferencias */
+    height: 90%; /* Ajusta la altura según tus necesidades */
+}
+
+.separatorHorizontal {
+    border-top: 2px solid #ccc; 
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.properties-title {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 70px;
+    color: #253D4E;
+}
+
+.size-section , .fabric-section{
+    display: flex;
+    align-items: center;
+}
+
+.size-name, .fabric-name {
+    margin-right: 10px;
+    text-align: center;
+    color: var(--1, #6f7172);
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    src: url('/assets/fonts/Lato-Regular.ttf') format('truetype');
+}
+
+.save-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+  
+  
+  

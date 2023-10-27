@@ -55,6 +55,7 @@
                     <div>
                       <img [src]="getSelectedPocketImageD()" [alt]="getPantType() === 'H' ? 'Hombre' : 'Mujer'">
                     </div>
+                    
                   </div>
                 <div class="T">
                   <div>
@@ -63,8 +64,8 @@
                 </div>
               </div>  
             <div class="text-center">
-              <button id="saveMeasureement" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Guardar Bolsillos</button>
-              <button [routerLink]="['/user/pant-stiker']" id ="goFrabrics" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Siguiente</button>
+              <button id="saveMeasureement" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit" (click)="savePocketSelection()">Guardar Bolsillos</button>
+              <button [routerLink]="['/user/pant-stiker']" id ="goFrabrics" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit" [disabled]="!continue">Siguiente</button>
             </div>
         </div>
     </div>

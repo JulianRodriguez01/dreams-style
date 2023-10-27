@@ -9,11 +9,10 @@ export interface Pants {
   wideThigh?: number;
   long?: number;
   type?: String;
-  isSelected?: boolean,
-  namePocket?: String;
-  typePocket?: String;
-  imagePocket?: String;
-  imageMen?: [{ imageName?: String, type?: String}],
-  imageWomen?: [{ imageName?: String,type?: String}],
-  colors?: any;
+  isSelected?: boolean;
+  selectedPocketsT?: [{ namePocket?: String; typePocket?: String; imgPocket?: String }];
+  selectedPocketsD?: [{ namePocket?: String; typePocket?: String; imgPocket?: String }];
+  imageMen?: [{ imageName?: String, type?: String}];
+  imageWomen?: [{ imageName?: String,type?: String}];
+  colors?: [{ name?: String, hex?: String}];
 }

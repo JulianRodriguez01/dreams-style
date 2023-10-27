@@ -56,39 +56,32 @@ export class PantPocketComponent {
 
   getSelectedPocketImageT(): string | undefined {
     const selectedPocket = this.pocketsList.find(pocket => pocket.isSelected && pocket.typePocket === 'T');
-  
-    // Verificar si el bolsillo está seleccionado
     if (selectedPocket && selectedPocket.isSelected) {
-      const imageName = selectedPocket.imageMen?.[0]?.imageName;
-  
-      if (selectedPocket.typePocket === 'T' && imageName) {
-        const imagePath = `../../../../assets/img/${imageName}`;
-        return imagePath;
-      }
+        const imageName = this.getPantType() === 'H' ? selectedPocket.imageMen?.[0]?.imageName : selectedPocket.imageWomen?.[0]?.imageName;
+        if (imageName) {
+            const imagePath = `../../../../assets/img/${imageName}`;
+            return imagePath;
+        }
     }
-  
-    return undefined;
-  }
-  
-  getSelectedPocketImageD(): string | undefined {
-    const selectedPocket = this.pocketsList.find(pocket => pocket.isSelected && pocket.typePocket === 'D');
-  
-    // Verificar si el bolsillo está seleccionado
-    if (selectedPocket && selectedPocket.isSelected) {
-      const imageName = selectedPocket.imageMen?.[0]?.imageName;
-  
-      if (selectedPocket.typePocket === 'D' && imageName) {
-        const imagePath = `../../../../assets/img/${imageName}`;
-        return imagePath;
-      }
-    }
-  
-    return undefined;
-  }
-  
-  
 
-  selectPocket(pocket: Pockets) {
+    return undefined;
+}
+
+getSelectedPocketImageD(): string | undefined {
+    const selectedPocket = this.pocketsList.find(pocket => pocket.isSelected && pocket.typePocket === 'D');
+
+    if (selectedPocket && selectedPocket.isSelected) {
+        const imageName = this.getPantType() === 'H' ? selectedPocket.imageMen?.[0]?.imageName : selectedPocket.imageWomen?.[0]?.imageName;
+        if (imageName) {
+            const imagePath = `../../../../assets/img/${imageName}`;
+            return imagePath;
+        }
+    }
+
+    return undefined;
+}
+
+selectPocket(pocket: Pockets) {
     if (pocket.typePocket === 'T') {
         this.pocketsList.filter(p => p.typePocket === 'T').forEach(p => p.isSelected = false);
     } else if (pocket.typePocket === 'D') {
@@ -98,13 +91,37 @@ export class PantPocketComponent {
     this.selectedPocket = pocket;
 }
 
+public savePocketSelection() {
+  const selectedPocketT = this.pocketsList.find(pocket => pocket.isSelected && pocket.typePocket === 'T');
+  const selectedPocketD = this.pocketsList.find(pocket => pocket.isSelected && pocket.typePocket === 'D');
+
+  if (selectedPocketT && selectedPocketD) {
+    this.servicePant.createCustomPant.selectedPocketsT = [{
+      namePocket: selectedPocketT.namePocket,
+      typePocket: selectedPocketT.typePocket,
+      imgPocket: this.getSelectedPocketImageT(),
+    }];
+
+    this.servicePant.createCustomPant.selectedPocketsD = [{
+      namePocket: selectedPocketD.namePocket,
+      typePocket: selectedPocketD.typePocket,
+      imgPocket: this.getSelectedPocketImageD(),
+    }];
+
+    this.continue = true;
+    alert('Bolsillos guardados correctamente.');
+    console.log('Bolsillos guardados correctamente:', this.servicePant.createCustomPant);
+  } else {
+    this.continue = false;
+    alert('Por favor, selecciona un bolsillo de cada tipo antes de guardar.');
+  }
+  }
+  
   private loadPockets(): void {
     this.pocketsList = this.service.getListPockets();
   }
   
   ngOnInit(): void {
     this.loadPockets(); 
-    console.log("Ruta imagen d" + this.getSelectedPocketImageD());
-    console.log("Ruta imagen t" + this.getSelectedPocketImageT());
   }
 }

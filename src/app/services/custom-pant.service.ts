@@ -18,19 +18,50 @@ export class CustomPantService {
     long: 0,
     type: "",
     isSelected: false,
-    namePocket: "",
-    typePocket: "",
-    imagePocket: '',
+    selectedPocketsT: [{namePocket: "", typePocket: "", imgPocket: ""}], 
+    selectedPocketsD: [{namePocket: "", typePocket: "", imgPocket: ""}], 
     imageMen: [{ imageName: '', type: 'H'}],
     imageWomen: [{ imageName: '',type: 'M'}],
-    colors: [
-      { name: '', hex: '', isSelected: false , image: ''},
-    ]
+    colors: [{ name: '', hex: ''}]
   };
 
   constructor() { 
   }
 
+  public getSelectedPocketsTImages(): String {
+    const selectedPocketsT = this.createCustomPant.selectedPocketsT;
+    if (selectedPocketsT && selectedPocketsT.length > 0) {
+      const imgPocket = selectedPocketsT[0].imgPocket || '';
+      return imgPocket;
+    }
+    return '';
+  }
+  
+  public getSelectedPocketsDImages(): String {
+    const selectedPocketsD = this.createCustomPant.selectedPocketsD;
+    if (selectedPocketsD && selectedPocketsD.length > 0) {
+      const imgPocket = selectedPocketsD[0].imgPocket || '';
+      return imgPocket;
+    }
+    return '';
+  }
+
+  public getSelectedSizeName(): String {
+    return this.createCustomPant.nameSize || '';
+  }
+  
+  public getSelectedFabricName(): String {
+    return this.createCustomPant.nameFabric || '';
+  }
+  
+  public getSelectedColorHex(): String {
+    const selectedColor = this.createCustomPant.colors;
+    if (selectedColor && selectedColor[0] && selectedColor[0].hex) {
+      return selectedColor[0].hex;
+    }
+    return '';
+  }
+  
   public getListPants(): Pants{
     return this.createCustomPant;
   }

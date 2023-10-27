@@ -62,9 +62,65 @@ body, html {
 }
 
 .tus-fotos {
-    margin-top: 20px;
-    max-width: 23 px
-    ;
+    border: 2px solid #ccc;
+    padding: 10px;
+    width: 540px;
+    height: 300px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinea las imágenes en la parte superior */
+}
+  
+.tus-fotos h2 {
+    margin-top: 0;
+    height: 30px;
+    background-color: #e7dede;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #6f7172;
+    width: 100%;
+    margin-bottom: 10px; /* Agregado espacio entre el título y las imágenes */
+}
+  
+.image-container {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinear texto debajo de la imagen */
+}
+  
+.image-container img {
+    width: auto;
+    height: auto;
+    max-height: 100px; /* Limita la altura de la imagen */
+    margin: 7px;
+}
+
+.T img, .D img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
+    margin-bottom: 10px;
+}
+
+.D{
+    margin-left: 150px;
+}
+
+
+.banner-container{
+    display: flex;
+}
+
+.btnRemove{
+    border: none;
+    background-color: #d8dde0;
+    margin-top: 2px;
 }
 
 .button-container {

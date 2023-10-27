@@ -3,22 +3,43 @@
         <div class="container">
             <div class="container-row">
                 <div class="icon"></div>
-                <div class="tittle">Elije un estampado</div>
+                <div class="title">Elije un estampado</div>
             </div>
             <div class="separator"></div>
-
-
-            <input type="file" (change)="onFileSelected($event)" accept="image/*">
-            <div class="tus-fotos" *ngIf="imageUrl">
-              <img [src]="imageUrl" alt="Imagen del pantalón">
+            <input type="file" (change)="onFileSelected($event)" accept="image/*" multiple>
+            <div class="tus-fotos">
+                <h2>Tus imágenes</h2>
+                <ng-container *ngFor="let imageUrl of imageUrls; let i = index">
+                    <div class="image-container">
+                        <img class="imgLoad" [src]="imageUrl" alt="Imagen del pantalón">
+                        <button class="btnRemove" (click)="removeImage(i)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </ng-container>
+                <div *ngIf="showErrorMessage" class="error-message">
+                    Has superado el número de imágenes permitidas (máximo 3).
+                </div>
             </div>
         </div>
     </div>
     <div class="col-md-7">
-
+        <div class="button-container"></div>
+        <div class="banner-container">
+            <div class="D">
+                <div *ngFor="let imgD of getImagePocketsD()">
+                    <img [src]="imgD">
+                </div>
+            </div>
+            <div class="T">
+                <div *ngFor="let imgT of getImagePocketsT()">
+                    <img [src]="imgT">
+                </div>
+            </div>
+        </div>
         <div class="text-center">
-            <button id="saveMeasureement" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Guardar Bolsillos</button>
-            <button [routerLink]="['/user/pant-pocket']" id ="goFrabrics" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Siguiente</button>
-          </div>
+            <button id="saveMeasurement" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Guardar Ajustes</button>
+            <button [routerLink]="['/user/pant-custom']" id="goFabrics" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Siguiente</button>
+        </div>
     </div>
 </div>

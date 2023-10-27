@@ -1,0 +1,28 @@
+<div class="row g-0 bg-customPant justify-content-center align-items-center">
+    <div class="final-pant-container">
+        <div class="image-pant-final">
+            <img [src]="selectedPocketsT" alt="Pockets T">
+            <img [src]="selectedPocketsD" alt="Pockets D">
+        </div>
+        <div class="separatorVertical"></div>
+        <div class="properties-pant-final">
+            <div class="properties-title">Propiedades</div> <!-- Title "Properties" -->
+            <div class="separatorHorizontal"></div>
+            <div class="size-section">
+                <div class="size-name">Tu talla :  </div> <!-- Size name -->
+                <div class="circle-size">{{ selectedSize }}</div> <!-- Size circle -->
+            </div>
+            <div class="separatorHorizontal"></div>
+            
+            <div class="size-name"  style="text-align: left;">Tela selecionada : </div>
+            <div class="fabric-section">
+                <div class="color-box" [style.background-color]="selectedColorHex"></div> <!-- Color box -->
+                <div class="separator"></div>
+                <div class="fabric-name">{{ selectedFabric}}</div> <!-- Fabric name -->
+            </div>
+            <button class="save-button">Save Design</button> <!-- "Save Design" button -->
+        </div>    
+    </div>
+</div>
+
+

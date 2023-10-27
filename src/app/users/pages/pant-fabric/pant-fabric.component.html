@@ -30,7 +30,7 @@
         <div class="button-container">
             <div class="text-center">
                 <button id="saveMeasureement" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit"(click)="saveFabricSelection()">Guardar Tela</button>
-                <button [routerLink]="['/user/pant-pocket']" id ="goFrabrics" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit">Siguiente</button>
+                <button [routerLink]="['/user/pant-pocket']" id ="goFrabrics" class="btn btn-primary btn-lg py-2 rounded-pill" type="submit" [disabled]="!continue">Siguiente</button>
             </div>
         </div>
     </div>

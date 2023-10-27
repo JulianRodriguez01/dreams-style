@@ -120,7 +120,16 @@ li, ul{
     margin: 10px;
     border: 2px solid var(--6, #0a0a0a);
     cursor: pointer;
-}
+  }
+  
+  .color-square.selected {
+    border-color: rgb(42, 110, 236);
+  }
+  
+  .color-list .selected {
+    font-weight: bold; /* O cualquier otro estilo adicional para el color seleccionado */
+  }
+
   
 .color-name {
     text-align: center;

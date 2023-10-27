@@ -12,6 +12,7 @@ import { PantSizeComponent } from './pages/pant-size/pant-size.component';
 import { PantFabricComponent } from './pages/pant-fabric/pant-fabric.component';
 import { PantPocketComponent } from './pages/pant-pocket/pant-pocket.component';
 import { PantStikerComponent } from './pages/pant-stiker/pant-stiker.component';
+import { PantCustomComponent } from './pages/pant-custom/pant-custom.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PantStikerComponent } from './pages/pant-stiker/pant-stiker.component';
     PantFabricComponent,
     PantPocketComponent,
     PantStikerComponent,
+    PantCustomComponent,
   ],
   imports: [
     CommonModule,

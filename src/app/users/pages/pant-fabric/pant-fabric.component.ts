@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Fabrics } from 'src/app/models/fabric.model';
 import {PantFabricService } from 'src/app/services/pant-fabric.service';
-import { Pants } from 'src/app/models/pant.model';
 import { CustomPantService } from 'src/app/services/custom-pant.service'
 
 
@@ -13,13 +12,12 @@ import { CustomPantService } from 'src/app/services/custom-pant.service'
 export class PantFabricComponent implements OnInit {
 
   fabricsList: Fabrics[] = [];
-  selectedColor: Object[];
+  selectedColor: Object[] = [];
   selectedImage: string ;
   continue:boolean = false;
 
 
   constructor(private service: PantFabricService, private servicePant:CustomPantService) {
-    this.selectedColor  =  [{ name: 'Negro', hex: '#000000', isSelected: true , image: 'imgMezclillaWhite.jpg'}];
     this.selectedImage = 'imgFabricDefault.png'; 
   }
 
@@ -31,10 +29,14 @@ export class PantFabricComponent implements OnInit {
     if (fabric.colors) {
       fabric.colors.forEach((c: any) => c.isSelected = false);
       color.isSelected = true;
-      this.selectedColor = color; 
+      this.selectedColor = [color]; // Cambio aquí
       this.selectedImage = color.image;
+  
+      console.log(JSON.stringify(color)); // Esto imprimirá el objeto color como una cadena legible.
+      console.log(JSON.stringify(this.selectedColor) + "otra validación de color seleccionado");
     }
   }
+  
 
   toggleAccordion(event: Event) {
     const detailsElements = document.querySelectorAll('details');
@@ -46,12 +48,28 @@ export class PantFabricComponent implements OnInit {
   }
 
   handleColorClick(event: Event, color: any, fabric: Fabrics) {
-    event.stopPropagation(); // Evita la propagación del evento
-    this.toggleColorSelection(color, fabric); // Llama al método original
+    event.stopPropagation();
+    this.toggleColorSelection(color, fabric); 
   }
 
   saveFabricSelection() {
 
+    console.log(Array.isArray(this.selectedColor + "Array de tela seleccionada")); // Asegúrate de que esto imprima 'true'.
+
+    if (this.selectedColor.length > 0) {
+      const color = this.selectedColor[0] as any; 
+      this.servicePant.createCustomPant.nameFabric = color.name;
+      this.servicePant.createCustomPant.colors = [{
+        name: color.name,
+        hex: color.hex
+      }];
+      
+      this.continue = true;
+      alert('Tela guardada correctamente.');
+      console.log('Tela guardada correctamente:', this.servicePant.createCustomPant);
+    } else {
+      alert('Por favor, selecciona una tela antes de guardar.');
+    }
   }
   
   ngOnInit(): void {
