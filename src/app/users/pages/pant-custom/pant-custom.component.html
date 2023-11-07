@@ -1,8 +1,8 @@
 <div class="row g-0 bg-customPant justify-content-center align-items-center">
     <div class="final-pant-container">
         <div class="image-pant-final">
-            <img [src]="selectedPocketsT" alt="Pockets T">
             <img [src]="selectedPocketsD" alt="Pockets D">
+            <img [src]="selectedPocketsT" alt="Pockets T">   
         </div>
         <div class="separatorVertical"></div>
         <div class="properties-pant-final">
@@ -14,15 +14,18 @@
             </div>
             <div class="separatorHorizontal"></div>
             
-            <div class="size-name"  style="text-align: left;">Tela selecionada : </div>
+            <div class="size-name"  style="text-align: left;">Tela seleccionada : </div>
             <div class="fabric-section">
                 <div class="color-box" [style.background-color]="selectedColorHex"></div> <!-- Color box -->
-                <div class="separator"></div>
-                <div class="fabric-name">{{ selectedFabric}}</div> <!-- Fabric name -->
-            </div>
-            <button class="save-button">Save Design</button> <!-- "Save Design" button -->
-        </div>    
-    </div>
+                <div>
+                    <div class="fabric-name"> Tela - {{ selectedFabric }}</div> <!-- Fabric name -->
+                    <div class="fabric-name"> Color - {{ selectedColorName }}</div> <!-- Color name -->
+                </div>
+            </div>   
+            <app-btn-normal class="" size="small" textButton="Crea tu diseño"></app-btn-normal>
+            <button class="save-button" (click)="onSaveDesign()">Crea tu diseño</button>        
+        </div>  
+    </div>  
 </div>
 
 

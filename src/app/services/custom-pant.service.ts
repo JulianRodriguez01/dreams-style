@@ -7,7 +7,6 @@ import { Pants } from "../models/pant.model";
 export class CustomPantService {
 
   createCustomPant: Pants = {
-    id: 0,
     nameFabric: "",
     nameSize: "", 
     contourSize: 0,
@@ -17,7 +16,6 @@ export class CustomPantService {
     wideThigh: 0,
     long: 0,
     type: "",
-    isSelected: false,
     selectedPocketsT: [{namePocket: "", typePocket: "", imgPocket: ""}], 
     selectedPocketsD: [{namePocket: "", typePocket: "", imgPocket: ""}], 
     imageMen: [{ imageName: '', type: 'H'}],
@@ -58,6 +56,14 @@ export class CustomPantService {
     const selectedColor = this.createCustomPant.colors;
     if (selectedColor && selectedColor[0] && selectedColor[0].hex) {
       return selectedColor[0].hex;
+    }
+    return '';
+  }
+
+  public getSelectedColorName(): String {
+    const selectedColor = this.createCustomPant.colors;
+    if (selectedColor && selectedColor[0] && selectedColor[0].name) {
+      return selectedColor[0].name;
     }
     return '';
   }

@@ -1,0 +1,32 @@
+<div class="row g-0 bg-customPant justify-content-center align-items-center">
+    <button (click)="onPrevDesign()">Anterior</button>
+    <div class="final-pant-container">
+      <div class="image-pant-final">
+        <img [src]="getListOfDesigns()[currentIndex]?.selectedPocketsD?.[0]?.imgPocket" alt="Pockets D">
+        <img [src]="getListOfDesigns()[currentIndex]?.selectedPocketsT?.[0]?.imgPocket" alt="Pockets T">
+      </div>
+      <div class="separatorVertical"></div>
+      <div class="properties-pant-final">
+        <div class="properties-title">Propiedades</div> <!-- Title "Properties" -->
+        <div class="separatorHorizontal"></div>
+        <div class="size-section">
+          <div class="size-name">Tu talla: </div> <!-- Size name -->
+          <div class="circle-size">{{ getListOfDesigns()[currentIndex]?.nameSize }}</div> <!-- Size circle -->
+        </div>
+        <div class="separatorHorizontal"></div>
+  
+        <div class="size-name" style="text-align: left;">Tela seleccionada: </div>
+        <div class="fabric-section">
+          <div class="color-box" [style.background-color]="getListOfDesigns()[currentIndex]?.colors?.[0]?.hex"></div> <!-- Color box -->
+          <div>
+            <div class="fabric-name"> Tela - {{ getListOfDesigns()[currentIndex]?.nameFabric }}</div> <!-- Fabric name -->
+            <div class="fabric-name"> Color - {{ getListOfDesigns()[currentIndex]?.colors?.[0]?.name }}</div> <!-- Color name -->
+          </div>
+        </div>
+        <button class="save-button">Publicar</button>
+        <button class="save-button">Comprar</button>
+      </div>
+    </div>
+    <button (click)="onNextDesign()">Siguiente</button>
+  </div>
+  

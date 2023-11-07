@@ -13,7 +13,8 @@ export class PantFabricComponent implements OnInit {
 
   fabricsList: Fabrics[] = [];
   selectedColor: Object[] = [];
-  selectedImage: string ;
+  selectedImage: string;
+  selectedFabric: String | '' = "";
   continue:boolean = false;
 
 
@@ -26,16 +27,18 @@ export class PantFabricComponent implements OnInit {
   }
 
   toggleColorSelection(color: any, fabric: Fabrics) {
-    if (fabric.colors) {
+    if (fabric.colors && fabric.nameFabric) {
       fabric.colors.forEach((c: any) => c.isSelected = false);
       color.isSelected = true;
-      this.selectedColor = [color]; // Cambio aquí
+      this.selectedColor = [color];
       this.selectedImage = color.image;
-  
-      console.log(JSON.stringify(color)); // Esto imprimirá el objeto color como una cadena legible.
-      console.log(JSON.stringify(this.selectedColor) + "otra validación de color seleccionado");
+      this.selectedFabric = fabric.nameFabric; // Asigna el nombre de la tela solo si está definido
+      console.log(JSON.stringify(color));
+      console.log('Nombre de la tela seleccionada: ' + this.selectedFabric);
     }
   }
+  
+  
   
 
   toggleAccordion(event: Event) {
@@ -53,12 +56,9 @@ export class PantFabricComponent implements OnInit {
   }
 
   saveFabricSelection() {
-
-    console.log(Array.isArray(this.selectedColor + "Array de tela seleccionada")); // Asegúrate de que esto imprima 'true'.
-
     if (this.selectedColor.length > 0) {
       const color = this.selectedColor[0] as any; 
-      this.servicePant.createCustomPant.nameFabric = color.name;
+      this.servicePant.createCustomPant.nameFabric = this.selectedFabric;
       this.servicePant.createCustomPant.colors = [{
         name: color.name,
         hex: color.hex
