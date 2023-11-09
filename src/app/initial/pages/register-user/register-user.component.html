@@ -7,53 +7,58 @@
                         <h1 class="text-white m-0">Regístrate</h1>
                     </div>
                     <div class="card-body rounded-bottom bg-white p-5 text-center">
-                        <form>
+                        <form (ngSubmit)="onSubmit()">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control p-4" placeholder="Nombres" required="required" />
+                                        <input [(ngModel)]="data.name_user" name="name_user" type="text" class="form-control p-4" placeholder="Nombres" required="required" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control p-4" placeholder="Apellidos" required="required" />
+                                        <input [(ngModel)]="data.lastname_user" name="lastname_user" type="text" class="form-control p-4" placeholder="Apellidos" required="required" />
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                   <div class="form-group">
-                                    <input type="email" class="form-control p-4" placeholder="Correo electrónico" required="required" />
+                                    <input [(ngModel)]="data.email" name="email" type="email" class="form-control p-4" placeholder="Correo electrónico" required="required" />
                                   </div>
                                 </div>
                                 <div class="col-md-6">
                                   <div class="form-group">
-                                    <select class="form-control p-4" required="required">
+                                    <select [(ngModel)]="data.document_type" name="document_type" class="form-control p-4" required="required">
                                         <option value="" disabled selected>Selecciona tipo de documento</option>
-                                        <option value="cc">Cédula de Ciudadanía</option>
-                                        <option value="ci">Cédula de Identidad</option>
-                                        <option value="ce">Cédula de Extranjería</option>
+                                        <option value="CC">Cédula de Ciudadanía</option>
+                                        <option value="CI">Cédula de Identidad</option>
+                                        <option value="CE">Cédula de Extranjería</option>
                                     </select>
                                   </div>
                               </div>
                               <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="number" class="form-control p-4" placeholder="Número de documento" required="required" />
+                                    <input [(ngModel)]="data.document_number" (ngModelChange)="convertToText($event)" name="document_number" type="number" class="form-control p-4" placeholder="Número de documento" required="required" />
                                 </div>
                               </div>
                             </div>
+
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="password" class="form-control p-4" placeholder="Contraseña" required="required" />
-                                    </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <input [(ngModel)]="data.password" name="password" type="password" class="form-control p-4" placeholder="Contraseña" required="required" />
                                 </div>
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                      <input type="password"  class="form-control p-4" placeholder="Confirme su contraseña" required="required" />
-                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <input [(ngModel)]="data.confirmPassword" name="confirmPassword" [ngModelOptions]="{ standalone: true }" type="password" class="form-control p-4" placeholder="Confirme su contraseña" required="required" />
+                                </div>
+                                <div *ngIf="data.password !== data.confirmPassword" class="text-danger">
+                                  Las contraseñas no coinciden.
+                                </div>
                               </div>
                             </div>
+
                             <div class="button-container">
                                 <div class="mb-3">
                                     <div class="text-center">
@@ -74,10 +79,4 @@
             </div>
         </div>
     </div>
-</div>
-<div>
-  <h3>Usuarios</h3>
-    <li *ngFor="let item of data">
-      1. {{item}}
-    </li>
 </div>

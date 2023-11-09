@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApiPersonService } from '../../../services/api-person.service';
 
 @Component({
@@ -8,17 +8,29 @@ import { ApiPersonService } from '../../../services/api-person.service';
 })
 export class RegisterUserComponent {
 
-  data: any[] = [];
+  data: any = { };
 
   constructor(private apiPersonService: ApiPersonService) { }
 
-  ngOnInit(): void {
-    this.getUsers();
+  convertToText(value: number): void {
+    this.data.document_number = value.toString();
   }
 
-  getUsers(){
-    this.apiPersonService.getUsers().subscribe(data => {
-      this.data = data;
-    })
+  onSubmit() {
+    console.log('Datos enviados al servidor:', this.data);
+    if (this.data.password !== this.data.confirmPassword) {
+      console.error('Las contraseñas no coinciden');
+      return;
+    }
+    this.apiPersonService.registerUser(this.data).subscribe(
+      (response) => {
+        console.log('Usuario registrado con éxito', response);
+        alert('Usuario creado exitosamente');
+      },
+      (error) => {
+        console.error('Error al registrar usuario', error);
+        alert('Error al registrar usuario');
+      }
+    );
   }
 }
