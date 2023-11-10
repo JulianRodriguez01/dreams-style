@@ -3,15 +3,44 @@
     background-size: cover;
 }
 
+.contenedor-boton-rigth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh; /* Esto asegura que el contenedor ocupe toda la altura de la pantalla */
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px; /* Ajusta el padding según sea necesario */
+}
+
+.contenedor-boton-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh; /* Esto asegura que el contenedor ocupe toda la altura de la pantalla */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px; /* Ajusta el padding según sea necesario */
+}
+
+.boton-redondo {
+  border-radius: 50%;
+  padding: 10px 20px; /* Ajusta el padding según sea necesario */
+}
+
 @font-face {
     font-family: 'Quicksand';
-    src: url('/assets/fonts/Quicksand.ttf') format('truetype'); 
+    src: url('/assets/fonts/Quicksand.ttf') format('truetype');
 }
 
 body {
     font-family: 'Quicksand', sans-serif;
 }
-  
+
 body, html {
     margin: 0;
     display: flex;
@@ -19,7 +48,7 @@ body, html {
     align-items: center;
     background-color: #c92f2f;
 }
-  
+
 .tittle{
     font-family: 'Quicksand';
     font-style: normal;
@@ -38,7 +67,7 @@ body, html {
     height: 450px;
     background-color: white;
     margin:100px;
-    border-radius: 15px; 
+    border-radius: 15px;
     justify-content: space-between;
 }
 
@@ -60,7 +89,7 @@ body, html {
 }
 
 .image-pant-final img {
-    display: inline-block;  
+    display: inline-block;
     width: 200px;
     height: 400px;
     margin-top: 25px;
@@ -92,12 +121,12 @@ body, html {
 }
 
 .separatorVertical {
-    border-left: 1px solid #888686; 
-    height: 90%; 
+    border-left: 1px solid #888686;
+    height: 90%;
 }
 
 .separatorHorizontal {
-    border-top: 2px solid #ccc; 
+    border-top: 2px solid #ccc;
     margin-bottom: 5px;
     width: 100%;
 }
@@ -153,4 +182,3 @@ body, html {
     background-color: #8443ff; /* Cambia el color de fondo cuando se pasa el cursor por encima */
 }
 
-  
