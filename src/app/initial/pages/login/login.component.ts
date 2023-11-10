@@ -5,6 +5,8 @@ import { Login } from 'src/app/models/login';
 import { Response } from 'src/app/models/response';
 import { Subscription, observeOn } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { ApiPersonService } from '../../../services/api-person.service';
+
 /*import { DataService } from 'src/app/services/data.service';
 import { SecurityService } from 'src/app/services/security.service';
 import { ErrorStateMatcher1 } from '../error-state-matcher1';
@@ -20,8 +22,10 @@ export class LoginComponent implements OnInit, OnDestroy {
   formLogin: FormGroup;
   subRef$: Subscription | undefined;
   loginError: boolean = false;
-    
+  
+
   constructor(
+    private apiService: ApiPersonService,
     formBuilder: FormBuilder,
     private http: HttpClient,
     private router: Router,
@@ -45,12 +49,14 @@ export class LoginComponent implements OnInit, OnDestroy {
         console.log('token', token);
         sessionStorage.setItem('token', token);
         this.router.navigate(['user']);
+        this.apiService.setAuthenticationTrue();
       } else {
         console.log('Error: Respuesta de API no contiene un token válido.');
       }
     }, err => {
       console.log('Error en el login', err);
       this.loginError = true;
+      this.apiService.setAuthenticationFalse();
     });    
   }
 

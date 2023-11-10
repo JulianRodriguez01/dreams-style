@@ -21,6 +21,7 @@ import { HeaderInitialComponent } from './components/header-initial/header-initi
 import { RegisterUserComponent } from './pages/register-user/register-user.component';
 import { RecoveryAccountComponent } from './pages/recovery-account/recovery-account.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
+import { UnauthorizedComponent } from './pages/unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
     RegisterUserComponent,
     RecoveryAccountComponent,
     CatalogComponent,
+    UnauthorizedComponent,
   ],
   imports: [
     CommonModule,
