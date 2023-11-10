@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ApiPersonService } from '../../app/services/api-person.service';
 
@@ -43,6 +44,7 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
     RouterModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     BtnNormalComponent,
@@ -53,3 +55,4 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
   ]
 })
 export class InitialModule { }
+export class LoginModule { }
