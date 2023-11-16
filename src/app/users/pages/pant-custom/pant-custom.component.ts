@@ -30,12 +30,13 @@ export class PantCustomComponent {
   onSaveDesign() {
     const newDesign = this.servicePant.getListPants();
     this.listDesingPant.addPant(newDesign);
-    console.log("Estes es el pantalón-------------------------" + JSON.stringify(this.servicePant))
+    console.log("Estes es el pantalón-------------------------" + JSON.stringify(this.servicePant));
     console.log("Lista de pantalones: " + JSON.stringify(this.listDesingPant));
+
     if (this.listDesingPant.getList().includes(newDesign)) {
-      alert("El diseño se agregó correctamente a la lista de pantalones.");
+        alert("Hubo un problema al agregar el diseño a la lista de pantalones.");
     } else {
-      alert("Hubo un problema al agregar el diseño a la lista de pantalones.");
+        alert("El diseño se agregó correctamente a la lista de pantalones.");
     }
   }
 }

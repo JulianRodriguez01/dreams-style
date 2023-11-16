@@ -1,7 +1,5 @@
 <div class="row g-0 bg-customPant justify-content-center align-items-center">
-  <div class="contenedor-boton-left">
-    <button (click)="onPrevDesign()" class="boton-redondo">Anterior</button>
-  </div>
+    <button (click)="onPrevDesign()" class="arrow-left"></button>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
   <div class="final-pant-container">
       <div class="image-pant-final">
         <img [src]="getListOfDesigns()[currentIndex]?.selectedPocketsD?.[0]?.imgPocket" alt="Pockets D">
@@ -29,9 +27,5 @@
         <button class="save-button">Comprar</button>
       </div>
     </div>
-    <button (click)="onNextDesign()" class="boton-redondo">Anterior</button>
-
-    <div class="contenedor-boton-rigth">
-      <button (click)="onNextDesign()" class="boton-redondo">Anterior</button>
-    </div>
-  </div>
+    <button (click)="onNextDesign()" class="arrow-right"></button>     
+</div>

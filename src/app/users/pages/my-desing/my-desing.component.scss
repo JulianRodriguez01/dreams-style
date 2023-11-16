@@ -8,8 +8,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  height: 100vh; /* Esto asegura que el contenedor ocupe toda la altura de la pantalla */
-  position: fixed;
+  position: relative;
+  top: -550vh; /* Ajusta este valor según sea necesario */
+  height: -200vh; /* Esto asegura que el contenedor ocupe toda la altura de la pantalla */
   top: 0;
   right: 0;
   padding: 20px; /* Ajusta el padding según sea necesario */
@@ -21,7 +22,6 @@
   justify-content: center;
   align-items: flex-end;
   height: 100vh; /* Esto asegura que el contenedor ocupe toda la altura de la pantalla */
-  position: fixed;
   top: 0;
   left: 0;
   padding: 20px; /* Ajusta el padding según sea necesario */
@@ -180,5 +180,23 @@ body, html {
 
 .save-button:hover {
     background-color: #8443ff; /* Cambia el color de fondo cuando se pasa el cursor por encima */
+}
+
+.arrow-left{
+    background: url("/assets/icons/flecha-izquierda.png");
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow-right{
+    background: url("/assets/icons/flecha-correcta.png");
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
 }
 
