@@ -14,7 +14,7 @@ export class ApiPersonService {
   public IsAuthenticated = false;
 
   constructor(private http: HttpClient, private router: Router) {}
-  
+
   public getUsers() : Observable<any> {
     return this.http.get<any>(this.pathApi + "user");
   }
@@ -41,4 +41,6 @@ export class ApiPersonService {
   public setAuthenticationFalse(): void {
     this.IsAuthenticated = false;
   }
+
+
 }

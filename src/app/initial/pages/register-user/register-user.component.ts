@@ -25,7 +25,6 @@ export class RegisterUserComponent {
       this.isLoading = false;
       return;
     }
-
     this.apiPersonService.registerUser(this.data).subscribe(
       (response) => {
         console.log('Usuario registrado con éxito', response);

@@ -3,14 +3,14 @@
     <div class="container">
       <div class="left box-primary">
           <img class="image" src="https://cdn-icons-png.flaticon.com/512/219/219984.png" alt="" />
-          <h3 class="username text-center">Diana Infante</h3>
+          <h3 class="username text-center">{{name_user}}</h3>
         <a href="#" class="btn btn-primary btn-block"><b>Editar foto</b></a>
       </div>
       <div class="right tab-content">
         <form class="row g-3">
           <div class="col-md-6">
             <label for="validationServer01" class="form-label">Nombres</label>
-            <input type="text" class="form-control" id="validationServer01" value="Mark" placeholder="Ingrese su nombre" required>
+            <input type="text" class="form-control" id="validationServer01" value={{name_user}} placeholder="Ingrese su nombre" required>
           </div>
           <div class="col-md-6">
             <label for="validationServer02" class="form-label">Apellidos</label>

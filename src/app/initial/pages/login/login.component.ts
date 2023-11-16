@@ -6,11 +6,7 @@ import { Response } from 'src/app/models/response';
 import { Subscription, observeOn } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ApiPersonService } from '../../../services/api-person.service';
-
-/*import { DataService } from 'src/app/services/data.service';
-import { SecurityService } from 'src/app/services/security.service';
-import { ErrorStateMatcher1 } from '../error-state-matcher1';
-import { environment } from 'src/environments/environment';*/
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -22,10 +18,10 @@ export class LoginComponent implements OnInit, OnDestroy {
   formLogin: FormGroup;
   subRef$: Subscription | undefined;
   loginError: boolean = false;
-  
 
   constructor(
     private apiService: ApiPersonService,
+    private authService: AuthService,
     formBuilder: FormBuilder,
     private http: HttpClient,
     private router: Router,
@@ -41,23 +37,30 @@ export class LoginComponent implements OnInit, OnDestroy {
       email: this.formLogin.value.email,
       password: this.formLogin.value.password,
     };
-    console.log('Datos enviados al servidor:', usuarioLogin);
     this.http.post<Response>("https://localhost:7095/api/User/login", usuarioLogin, { observe: 'response' })
-    .subscribe(res => {
-      if (res.body) {
-        const token = res.body.response;
-        console.log('token', token);
-        sessionStorage.setItem('token', token);
-        this.router.navigate(['user']);
-        this.apiService.setAuthenticationTrue();
-      } else {
-        console.log('Error: Respuesta de API no contiene un token válido.');
-      }
-    }, err => {
-      console.log('Error en el login', err);
-      this.loginError = true;
-      this.apiService.setAuthenticationFalse();
-    });    
+      .subscribe(
+        (res: any) => {
+          const token = res.body.token;
+          if (token) {
+            localStorage.setItem('token', token);
+            const userInfo = this.authService.getUserInfoFromToken(token);
+            if (userInfo) {
+              console.log('Correo electrónico:', userInfo.userEmail);
+            } else {
+              console.error('No se pudo obtener la información del usuario desde el token.');
+            }
+            this.router.navigate(['user']);
+            this.apiService.setAuthenticationTrue();
+          } else {
+            console.error('Error: Respuesta de API no contiene un token válido.');
+          }
+        },
+        (err: any) => {
+          console.error('Error en el login', err);
+          this.loginError = true;
+          this.apiService.setAuthenticationFalse();
+        }
+      );
   }
 
   ngOnInit() {
