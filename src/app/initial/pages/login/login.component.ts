@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 import { ApiPersonService } from '../../../services/api-person.service';
 import { AuthService } from '../../../services/auth.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -43,6 +44,8 @@ export class LoginComponent implements OnInit, OnDestroy {
           const token = res.body.token;
           if (token) {
             localStorage.setItem('token', token);
+            console.log('TOKEN: ', token);
+
             const userInfo = this.authService.getUserInfoFromToken(token);
             if (userInfo) {
               console.log('Correo electrónico:', userInfo.userEmail);

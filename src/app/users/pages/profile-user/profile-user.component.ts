@@ -33,7 +33,6 @@ export class ProfileUserComponent {
     this.authService.getUserEmail(email).subscribe(
       (data) => {
         console.log('Respuesta del servidor:', data);
-        // Aquí puedes manipular la respuesta del servidor según tus necesidades
       },
       (error) => {
         console.error('Error en la solicitud:', error);
