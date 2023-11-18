@@ -43,9 +43,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         (res: any) => {
           const token = res.body.token;
           if (token) {
-            localStorage.setItem('token', token);
-            console.log('TOKEN: ', token);
-
+            sessionStorage.setItem('token', token);
             const userInfo = this.authService.getUserInfoFromToken(token);
             if (userInfo) {
               console.log('Correo electrónico:', userInfo.userEmail);

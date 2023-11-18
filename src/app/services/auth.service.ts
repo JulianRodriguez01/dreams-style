@@ -10,7 +10,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class AuthService  {
 
-  private pathApi = 'https://apipersondreamstyle.azurewebsites.net/api/User/user/';
+  private pathApi = 'https://localhost:7095/api/User/user/';
 
   constructor(private http: HttpClient, private router: Router, private jwtHelper: JwtHelperService) {}
 
@@ -21,7 +21,7 @@ export class AuthService  {
   getUserInfoFromToken(token: string): any {
     try {
       const decodedToken = this.jwtHelper.decodeToken(token);
-      const userEmail = decodedToken['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'];
+      const userEmail = decodedToken['unique_name'];
       return { userEmail };
     } catch (error) {
       console.error('Error al decodificar el token:', error);

@@ -1,21 +1,17 @@
 <header class='main-nav'>
   <ul>
-    <li [routerLink]="['/index']">
-      <i class="fa fa-home"></i>
-      <span>Inicio</span>
-    </li>
-    <li>
-      <i class="fa fa-paint-brush"></i>
-      <span [routerLink]="['/user/pant-gender']">Diseñar</span>
-    </li>
-    <li>
-      <i class="fa fa-folder-open" [routerLink]="['/user/my-desing']"></i>
-      <span>Mis diseños</span>
-    </li>
-    <li>
-      <i class='fa fa-user' [routerLink]="['profile-user']"></i>
+    <li [routerLink]="['profile-user']">
+      <i class='fa fa-user'></i>
       <span>Usuario</span>
     </li>
+    <li [routerLink]="['/user/my-desing']">
+      <i class="fa fa-folder-open"></i>
+      <span>Mis diseños</span>
+    </li>
+    <li [routerLink]="['/user/pant-gender']">
+      <i class="fa fa-paint-brush"></i>
+      <span>Diseñar</span>
+    </li>  
     <li>
       <i class="fa fa-sign-out"></i> <!-- Icono de log out -->
       <span>Cerrar sesión</span>

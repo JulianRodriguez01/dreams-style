@@ -3,10 +3,11 @@
     <div class="container">
       <div class="left box-primary">
           <img class="image" src="https://cdn-icons-png.flaticon.com/512/219/219984.png" alt="" />
-          <h3 class="username text-center">{{name_user}}</h3>
+          <h3 class="username text-center">{{name_user}} {{last_name_user}}</h3>
         <a href="#" class="btn btn-primary btn-block"><b>Editar foto</b></a>
       </div>
       <div class="right tab-content">
+        <h2>Cambio de Datos</h2>
         <form class="row g-3">
           <div class="col-md-6">
             <label for="validationServer01" class="form-label">Nombres</label>
@@ -14,22 +15,39 @@
           </div>
           <div class="col-md-6">
             <label for="validationServer02" class="form-label">Apellidos</label>
-            <input type="text" class="form-control" id="validationServer02" value="Otto" placeholder="Ingrese su apellido" required>
+            <input type="text" class="form-control" id="validationServer02" value={{last_name_user}} placeholder="Ingrese su apellido" required>
           </div>
           <div class="col-md-12">
             <label for="validationServer03" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+            <input type="email" class="form-control" id="validationServer03" value={{email_user}} aria-describedby="validationServer03Feedback" required>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="text-center mx-auto">
+                <app-btn-normal type="submit" size="small" textButton="Actualizar datos"></app-btn-normal>
+              </div>
+            </div>
+          </div>
+        </form>
+        <h2>Cambio de contraseña</h2>
+        <form class="row g-3">
+          <div class="col-md-12">
+            <label for="validationServer01" class="form-label">Contraseña anterior</label>
+            <input type="password" class="form-control" id="validationServer01" value={{password_user}} required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
           </div>
           <div class="col-md-6">
             <label for="validationServer01" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="validationServer01" value="Mark" required>
+            <input type="password" class="form-control" id="validationServer01" value={{password_user}} required>
             <div class="valid-feedback">
-              Looks good! 
+              Looks good!
             </div>
           </div>
           <div class="col-md-6">
             <label for="validationServer02" class="form-label">Confirmar contraseña</label>
-            <input type="password" class="form-control" id="validationServer02" value="Otto" required>
+            <input type="password" class="form-control" id="validationServer02" value={{password_user_2}} required>
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -45,7 +63,7 @@
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <div class="text-center mx-auto">
-                <app-btn-normal type="submit" size="medium" textButton="Guardar"></app-btn-normal>
+                <app-btn-normal type="submit" size="small" textButton="Cambiar contraseña"></app-btn-normal>
               </div>
             </div>
           </div>

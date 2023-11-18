@@ -18,18 +18,6 @@ export class HeaderComponentComponent {
     const button = this.el.nativeElement.children[0]; // Accede al primer hijo de <body>
     const nav = document.querySelector("nav");
     const header = document.querySelector("header");
-
-    this.renderer.listen(button, 'click', (event) => {
-      if (event.target.dataset.menustate === "closed") {
-        this.renderer.setAttribute(event.target, 'data-menustate', 'open');
-        this.renderer.setAttribute(nav, 'data-state', 'open');
-        this.renderer.setAttribute(header, 'data-menustate', 'open');
-      } else {
-        this.renderer.setAttribute(event.target, 'data-menustate', 'closed');
-        this.renderer.setAttribute(nav, 'data-state', 'closed');
-        this.renderer.setAttribute(header, 'data-menustate', 'closed');
-      }
-    });
   }
 
 }
