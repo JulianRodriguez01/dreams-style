@@ -10,12 +10,12 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class AuthService  {
 
-  private pathApi = 'https://localhost:7095/api/User/user/';
+  private pathApi = 'https://localhost:7095/api/User/';
 
   constructor(private http: HttpClient, private router: Router, private jwtHelper: JwtHelperService) {}
 
   public getUserEmail(email: any) : Observable<any> {
-    return this.http.get<any>(this.pathApi + "email/" + email);
+    return this.http.get<any>(this.pathApi + "user/email/" + email);
   }
 
   getUserInfoFromToken(token: string): any {

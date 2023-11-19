@@ -34,6 +34,12 @@ export class ApiPersonService {
     }
   }
 
+  logout(): void {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']); 
+    this.IsAuthenticated = false;
+  }
+
   public setAuthenticationTrue(): void {
     this.IsAuthenticated = true;
   }

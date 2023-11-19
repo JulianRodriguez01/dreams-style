@@ -6,6 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { ApiPersonService } from '../services/api-person.service'; 
+
 import { InitialModule } from '../initial/initial.module';
 import { HeaderUserComponent } from './components/header-user/header-user.component';
 import { LayoutUserComponent } from './components/layout-user/layout-user.component';
@@ -38,6 +40,9 @@ import { PantCustomComponent } from './pages/pant-custom/pant-custom.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+  ],
+  providers: [
+    ApiPersonService,
   ]
 })
 export class UsersModule { }

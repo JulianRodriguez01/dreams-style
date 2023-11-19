@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ApiPersonService } from '../../../services/api-person.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header-user',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderUserComponent {
 
+  constructor(private apiPersonService: ApiPersonService) {}
+
+  logout(): void {
+    this.apiPersonService.logout();
+  }
 }

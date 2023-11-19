@@ -50,16 +50,10 @@ export class ProfileUserComponent {
   }
 
   updateDataUser(){
-    this.authService.updateValueUser(this.data).subscribe(
-      (response) => {
-        console.log('Usuario modificado con éxito', response);
-        alert('Usuario creado exitosamente');
-      },
-      (error) => {
-        console.error('Error al registrar usuario', error);
-        alert('Error al registrar usuario');
-      }
-    ).add(() => {
-    });
+   /* const token = sessionStorage.getItem('token');
+    if (token) {
+      const userInfoEmail = this.authService.getUserInfoFromToken(token);
+      this.authService.updateValueUser(this.data).subscribe(
+  */
   }
 }
