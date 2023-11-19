@@ -55,10 +55,11 @@ export class PantSizeComponent implements OnInit {
   public saveMeasureementPant() {
     let measurementSelection = this.sizesList.find(medida => medida.isSelected === true);
     if (measurementSelection) {
-        const customPant = this.servicePant.createCustomPant;
+        const customPant = this.servicePant.listNewPants;
 
         if (customPant) {
             // Actualiza las medidas
+            customPant.idMeasurement = measurementSelection.id;
             customPant.nameSize = measurementSelection.nameSize;
             customPant.contourSize = measurementSelection.contourSize;
             customPant.crotchLength = measurementSelection.crotchLength;
@@ -66,7 +67,6 @@ export class PantSizeComponent implements OnInit {
             customPant.wideBoot = measurementSelection.wideBoot;
             customPant.wideThigh = measurementSelection.wideThigh;
             customPant.long = measurementSelection.long;
-
             this.continue = true;
             alert('Medidas guardadas correctamente.');
         } else {

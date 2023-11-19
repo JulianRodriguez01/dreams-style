@@ -7,7 +7,7 @@ import { Pants } from "../models/pant.model";
 export class CustomPantListService {
 
   listDesingPant: Pants[] = [{
-    id: 0,
+    idPant: 0,
     nameFabric: "",
     nameSize: "", 
     contourSize: 0,
@@ -29,12 +29,12 @@ export class CustomPantListService {
   private nextId: number = 1; // Inicializar el ID en 1
 
   addPant(pant: Pants) {
-    pant.id = this.nextId; // Asignar el próximo ID
-    this.listDesingPant.push({id: this.nextId , ...pant}); // Agregar el pantalón a la lista con el ID asignado
+    pant.idPant = this.nextId; // Asignar el próximo ID
+    this.listDesingPant.push({idPant: this.nextId , ...pant}); // Agregar el pantalón a la lista con el ID asignado
     this.nextId++; // Incrementar el próximo ID
 }
 
   getList(): Pants[] {
-    return this.listDesingPant;
+    return this.listDesingPant.filter(pant => pant.idPant !== 0);
   }
 }

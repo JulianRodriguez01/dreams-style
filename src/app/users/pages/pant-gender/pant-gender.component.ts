@@ -21,7 +21,7 @@ export class PantGenderComponent {
     if (customPant) {
       customPant.type = gender;
     } else {
-      this.servicePant.createCustomPant.type = gender;
+      this.servicePant.listNewPants.type = gender;
     }
     console.log(customPant);
   }

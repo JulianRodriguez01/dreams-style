@@ -58,15 +58,16 @@ export class PantFabricComponent implements OnInit {
   saveFabricSelection() {
     if (this.selectedColor.length > 0) {
       const color = this.selectedColor[0] as any; 
-      this.servicePant.createCustomPant.nameFabric = this.selectedFabric;
-      this.servicePant.createCustomPant.colors = [{
+      this.servicePant.listNewPants.nameFabric = this.selectedFabric;
+      this.servicePant.listNewPants.colors = [{
+        idFabric: color.id,
         name: color.name,
         hex: color.hex
       }];
       
       this.continue = true;
       alert('Tela guardada correctamente.');
-      console.log('Tela guardada correctamente:', this.servicePant.createCustomPant);
+      console.log('Tela guardada correctamente:', this.servicePant.listNewPants);
     } else {
       alert('Por favor, selecciona una tela antes de guardar.');
     }

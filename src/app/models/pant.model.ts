@@ -1,5 +1,6 @@
 export interface Pants {
-  id?: number;
+  idPant?: number;
+  idMeasurement?: number;
   nameFabric?: String;
   nameSize?: String;
   contourSize?: number;
@@ -13,5 +14,6 @@ export interface Pants {
   selectedPocketsD?: [{ namePocket?: String; typePocket?: String; imgPocket?: String }];
   imageMen?: [{ imageName?: String, type?: String}];
   imageWomen?: [{ imageName?: String,type?: String}];
-  colors?: [{ name?: String, hex?: String}];
+  colors?: [{ idFabric?: String , name?: String, hex?: String}];
+
 }

@@ -96,13 +96,13 @@ public savePocketSelection() {
   const selectedPocketD = this.pocketsList.find(pocket => pocket.isSelected && pocket.typePocket === 'D');
 
   if (selectedPocketT && selectedPocketD) {
-    this.servicePant.createCustomPant.selectedPocketsT = [{
+    this.servicePant.listNewPants.selectedPocketsT = [{
       namePocket: selectedPocketT.namePocket,
       typePocket: selectedPocketT.typePocket,
       imgPocket: this.getSelectedPocketImageT(),
     }];
 
-    this.servicePant.createCustomPant.selectedPocketsD = [{
+    this.servicePant.listNewPants.selectedPocketsD = [{
       namePocket: selectedPocketD.namePocket,
       typePocket: selectedPocketD.typePocket,
       imgPocket: this.getSelectedPocketImageD(),
@@ -110,7 +110,7 @@ public savePocketSelection() {
 
     this.continue = true;
     alert('Bolsillos guardados correctamente.');
-    console.log('Bolsillos guardados correctamente:', this.servicePant.createCustomPant);
+    console.log('Bolsillos guardados correctamente:', this.servicePant.listNewPants);
   } else {
     this.continue = false;
     alert('Por favor, selecciona un bolsillo de cada tipo antes de guardar.');

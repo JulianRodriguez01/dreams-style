@@ -35,15 +35,15 @@ export class PantStikerComponent {
   }
 
   getImagePocketsT() {
-    if (this.servicePant.createCustomPant.selectedPocketsT) {
-        return this.servicePant.createCustomPant.selectedPocketsT.map(pocket => pocket.imgPocket);
+    if (this.servicePant.listNewPants.selectedPocketsT) {
+        return this.servicePant.listNewPants.selectedPocketsT.map(pocket => pocket.imgPocket);
     }
     return [];
   } 
 
   getImagePocketsD() {
-    if (this.servicePant.createCustomPant.selectedPocketsD) {
-        return this.servicePant.createCustomPant.selectedPocketsD.map(pocket => pocket.imgPocket);
+    if (this.servicePant.listNewPants.selectedPocketsD) {
+        return this.servicePant.listNewPants.selectedPocketsD.map(pocket => pocket.imgPocket);
     }
     return [];
   }

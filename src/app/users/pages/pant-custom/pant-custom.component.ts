@@ -34,9 +34,9 @@ export class PantCustomComponent {
     console.log("Lista de pantalones: " + JSON.stringify(this.listDesingPant));
 
     if (this.listDesingPant.getList().includes(newDesign)) {
-        alert("Hubo un problema al agregar el diseño a la lista de pantalones.");
+        alert("Hubo un problema al agregar el diseño.");
     } else {
-        alert("El diseño se agregó correctamente a la lista de pantalones.");
+        alert("Haz creado tu Diseño correctamente!.");
     }
   }
 }

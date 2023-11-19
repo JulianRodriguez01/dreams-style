@@ -162,7 +162,7 @@ export class SizeServiceService {
   type:"H",
   isSelected: false,
 },{
-  id:1,
+  id:2,
   nameSize: "Personaliza tu talla", 
   contourSize: 0,
   crotchLength:0,

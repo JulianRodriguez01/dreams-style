@@ -94,7 +94,8 @@ input[type="range"] {
   background-color: #a02929;
   border: none;
   padding: 3px;
-  cursor: pointer;
+  pointer-events: none; /* Evita la interacción del mouse */
+  opacity: 0.9; /* Reduce la opacidad para indicar que no son interactivos */
 }
 
 .imgBanner {
@@ -124,3 +125,4 @@ button {
   width: 12rem !important;
   margin: 10px;
 }
+

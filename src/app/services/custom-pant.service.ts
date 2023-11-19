@@ -6,7 +6,9 @@ import { Pants } from "../models/pant.model";
 })
 export class CustomPantService {
 
-  createCustomPant: Pants = {
+  listNewPants: Pants = {
+    idPant: 0,
+    idMeasurement: 0,
     nameFabric: "",
     nameSize: "", 
     contourSize: 0,
@@ -20,14 +22,14 @@ export class CustomPantService {
     selectedPocketsD: [{namePocket: "", typePocket: "", imgPocket: ""}], 
     imageMen: [{ imageName: '', type: 'H'}],
     imageWomen: [{ imageName: '',type: 'M'}],
-    colors: [{ name: '', hex: ''}]
+    colors: [{ idFabric : '', name: '', hex: ''}]
   };
 
   constructor() { 
   }
 
   public getSelectedPocketsTImages(): String {
-    const selectedPocketsT = this.createCustomPant.selectedPocketsT;
+    const selectedPocketsT = this.listNewPants.selectedPocketsT;
     if (selectedPocketsT && selectedPocketsT.length > 0) {
       const imgPocket = selectedPocketsT[0].imgPocket || '';
       return imgPocket;
@@ -36,7 +38,7 @@ export class CustomPantService {
   }
   
   public getSelectedPocketsDImages(): String {
-    const selectedPocketsD = this.createCustomPant.selectedPocketsD;
+    const selectedPocketsD = this.listNewPants.selectedPocketsD;
     if (selectedPocketsD && selectedPocketsD.length > 0) {
       const imgPocket = selectedPocketsD[0].imgPocket || '';
       return imgPocket;
@@ -45,15 +47,15 @@ export class CustomPantService {
   }
 
   public getSelectedSizeName(): String {
-    return this.createCustomPant.nameSize || '';
+    return this.listNewPants.nameSize || '';
   }
   
   public getSelectedFabricName(): String {
-    return this.createCustomPant.nameFabric || '';
+    return this.listNewPants.nameFabric || '';
   }
   
   public getSelectedColorHex(): String {
-    const selectedColor = this.createCustomPant.colors;
+    const selectedColor = this.listNewPants.colors;
     if (selectedColor && selectedColor[0] && selectedColor[0].hex) {
       return selectedColor[0].hex;
     }
@@ -61,7 +63,7 @@ export class CustomPantService {
   }
 
   public getSelectedColorName(): String {
-    const selectedColor = this.createCustomPant.colors;
+    const selectedColor = this.listNewPants.colors;
     if (selectedColor && selectedColor[0] && selectedColor[0].name) {
       return selectedColor[0].name;
     }
@@ -69,6 +71,6 @@ export class CustomPantService {
   }
   
   public getListPants(): Pants{
-    return this.createCustomPant;
+    return this.listNewPants;
   }
 }
