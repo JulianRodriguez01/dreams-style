@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProfileUserComponent {
 
+  data: any = { };
   public name_user = '';
   public last_name_user = '';
   public email_user = '';
@@ -48,14 +49,17 @@ export class ProfileUserComponent {
     });
   }
 
-  getUserByEmail(email: string): void {
-    this.authService.getUserEmail(email).subscribe(
-      (data) => {
-        console.log('Respuesta del servidor:', data);
+  updateDataUser(){
+    this.authService.updateValueUser(this.data).subscribe(
+      (response) => {
+        console.log('Usuario modificado con éxito', response);
+        alert('Usuario creado exitosamente');
       },
       (error) => {
-        console.error('Error en la solicitud:', error);
+        console.error('Error al registrar usuario', error);
+        alert('Error al registrar usuario');
       }
-    );
+    ).add(() => {
+    });
   }
 }

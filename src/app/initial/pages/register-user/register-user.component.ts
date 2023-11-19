@@ -19,7 +19,6 @@ export class RegisterUserComponent {
   }
 
   onSubmit() {
-    console.log('Datos enviados al servidor:', this.data);
     if (this.data.password !== this.data.confirmPassword) {
       console.error('Las contraseñas no coinciden');
       this.isLoading = false;

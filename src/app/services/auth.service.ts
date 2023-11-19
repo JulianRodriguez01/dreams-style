@@ -28,4 +28,13 @@ export class AuthService  {
       return null;
     }
   }
+
+  public updateValueUser(userData: any): Observable<any> {
+    return this.http.put<any>(this.pathApi + 'update-user', userData).pipe(
+      catchError((error: HttpErrorResponse) => {
+        console.error('Error en la solicitud:', error);
+        return throwError(error);
+      })
+    );
+  }
 }

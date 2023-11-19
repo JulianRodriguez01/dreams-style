@@ -8,18 +8,18 @@
       </div>
       <div class="right tab-content">
         <h2>Cambio de Datos</h2>
-        <form class="row g-3">
+        <form class="row g-3" (ngSubmit)="updateDataUser()">
           <div class="col-md-6">
             <label for="validationServer01" class="form-label">Nombres</label>
-            <input type="text" class="form-control" id="validationServer01" value={{name_user}} placeholder="Ingrese su nombre" required>
+            <input [(ngModel)]="data.name_user" type="text" class="form-control" id="validationServer01" value={{name_user}} placeholder="Ingrese su nombre" required>
           </div>
           <div class="col-md-6">
             <label for="validationServer02" class="form-label">Apellidos</label>
-            <input type="text" class="form-control" id="validationServer02" value={{last_name_user}} placeholder="Ingrese su apellido" required>
+            <input [(ngModel)]="data.lastname_user" type="text" class="form-control" id="validationServer02" value={{last_name_user}} placeholder="Ingrese su apellido" required>
           </div>
           <div class="col-md-12">
             <label for="validationServer03" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="validationServer03" value={{email_user}} aria-describedby="validationServer03Feedback" required>
+            <input [(ngModel)]="data.email" type="email" class="form-control" id="validationServer03" value={{email_user}} aria-describedby="validationServer03Feedback" required>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
