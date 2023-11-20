@@ -36,7 +36,7 @@ export class PantCustomComponent {
     if (this.listDesingPant.getList().includes(newDesign)) {
         alert("Hubo un problema al agregar el diseño.");
     } else {
-      const data: any = { id_pant: 2, id_fabric: 2, id_pant_measurement: 2}; 
+      const data: any = { id_pant: this.servicePant.getIdPant, id_fabric: this.servicePant.getIdMeasurement, id_pant_measurement: 2}; 
       this.savePant(data);
       alert("Haz creado tu Diseño correctamente!.");
     }

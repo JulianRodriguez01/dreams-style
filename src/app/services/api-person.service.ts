@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ApiPersonService {
 
-  //private pathApi = 'https://apipersondreamstyle.azurewebsites.net/api/User/';
-  private pathApi = 'https://localhost:7095/api/User/';
+  private pathApi = 'http://backdreamstyle.somee.com/api/User/';
+  //private pathApi = 'https://localhost:7095/api/User/';
   public IsAuthenticated = false;
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -36,7 +36,7 @@ export class ApiPersonService {
 
   logout(): void {
     localStorage.removeItem('token');
-    this.router.navigate(['/login']); 
+    this.router.navigate(['/login']);
     this.IsAuthenticated = false;
   }
 

@@ -10,7 +10,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class AuthService  {
 
-  private pathApi = 'https://localhost:7095/api/User/';
+  private pathApi = 'http://backdreamstyle.somee.com/api/User/';
 
   constructor(private http: HttpClient, private router: Router, private jwtHelper: JwtHelperService) {}
 

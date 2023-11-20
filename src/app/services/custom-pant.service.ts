@@ -28,6 +28,14 @@ export class CustomPantService {
   constructor() { 
   }
 
+  public getIdPant(): number | undefined {
+    return this.listNewPants?.idPant;
+  }
+
+  public getIdMeasurement(): number | undefined {
+    return this.listNewPants?.idMeasurement;
+  }
+  
   public getSelectedPocketsTImages(): String {
     const selectedPocketsT = this.listNewPants.selectedPocketsT;
     if (selectedPocketsT && selectedPocketsT.length > 0) {
