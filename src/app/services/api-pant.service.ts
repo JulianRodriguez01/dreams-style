@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ApiPantService {
 
-  private pathApi = 'http://backdreamstyle.somee.com/api/User/';
+  private pathApi = 'http://backdreamstyle.somee.com/api/Pants/';
   // private pathApi = 'https://localhost:7095/api/Pants/';
 
   constructor(private http: HttpClient, private router: Router) {}
