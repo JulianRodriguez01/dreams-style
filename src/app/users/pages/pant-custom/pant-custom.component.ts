@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CustomPantService } from 'src/app/services/custom-pant.service';
 import { CustomPantListService} from 'src/app/services/custom-pant-list.service';
+import { ApiPantService } from '../../../services/api-pant.service';
 
 @Component({
   selector: 'app-pant-custom',
@@ -16,7 +17,7 @@ export class PantCustomComponent {
   selectedColorHex: String = '';
   selectedColorName: String = '';
 
-  constructor(private servicePant: CustomPantService, private listDesingPant : CustomPantListService) {
+  constructor(private apiPantService: ApiPantService, private servicePant: CustomPantService, private listDesingPant : CustomPantListService) {
     this.selectedPocketsT = this.servicePant.getSelectedPocketsTImages();
     console.log("Ruta imagen T" + this.selectedPocketsT);
     this.selectedPocketsD = this.servicePant.getSelectedPocketsDImages();
@@ -32,11 +33,25 @@ export class PantCustomComponent {
     this.listDesingPant.addPant(newDesign);
     console.log("Estes es el pantalón-------------------------" + JSON.stringify(this.servicePant));
     console.log("Lista de pantalones: " + JSON.stringify(this.listDesingPant));
-
     if (this.listDesingPant.getList().includes(newDesign)) {
         alert("Hubo un problema al agregar el diseño.");
     } else {
-        alert("Haz creado tu Diseño correctamente!.");
+      const data: any = { id_pant: 2, id_fabric: 2, id_pant_measurement: 2}; 
+      this.savePant(data);
+      alert("Haz creado tu Diseño correctamente!.");
     }
+  }
+
+  savePant(data: any) {
+    this.apiPantService.addPant(data).subscribe(
+      (response) => {
+        console.log('Pantalón agregado con éxito', response);
+        alert('Pantalón creado exitosamente');
+      },
+      (error) => {
+        console.error('Error al agregar pantalón', error);
+        alert('Error al agregar pantalón');
+      }
+    );
   }
 }

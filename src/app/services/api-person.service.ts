@@ -47,6 +47,4 @@ export class ApiPersonService {
   public setAuthenticationFalse(): void {
     this.IsAuthenticated = false;
   }
-
-
 }

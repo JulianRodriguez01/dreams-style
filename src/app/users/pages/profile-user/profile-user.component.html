@@ -11,22 +11,15 @@
         <form class="row g-3" (ngSubmit)="updateDataUser()">
           <div class="col-md-6">
             <label for="validationServer01" class="form-label">Nombres</label>
-            <input [(ngModel)]="data.name_user" type="text" class="form-control" id="validationServer01" value={{name_user}} placeholder="Ingrese su nombre" required>
+            <input [(ngModel)]="data.name_user" type="text" class="form-control" id="validationServer01" value={{name_user}} placeholder="Ingrese su nombre" disabled required>
           </div>
           <div class="col-md-6">
             <label for="validationServer02" class="form-label">Apellidos</label>
-            <input [(ngModel)]="data.lastname_user" type="text" class="form-control" id="validationServer02" value={{last_name_user}} placeholder="Ingrese su apellido" required>
+            <input [(ngModel)]="data.lastname_user" type="text" class="form-control" id="validationServer02" value={{last_name_user}} placeholder="Ingrese su apellido" disabled required>
           </div>
           <div class="col-md-12">
             <label for="validationServer03" class="form-label">Correo electrónico</label>
-            <input [(ngModel)]="data.email" type="email" class="form-control" id="validationServer03" value={{email_user}} aria-describedby="validationServer03Feedback" required>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-              <div class="text-center mx-auto">
-                <app-btn-normal type="submit" size="small" textButton="Actualizar datos"></app-btn-normal>
-              </div>
-            </div>
+            <input [(ngModel)]="data.email" type="email" class="form-control" id="validationServer03" value={{email_user}} aria-describedby="validationServer03Feedback" disabled required>
           </div>
         </form>
         <h2>Cambio de contraseña</h2>
